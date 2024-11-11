@@ -13,6 +13,7 @@ int main(){
     {
         int t;
         scanf("%d",&t);
+        t=t%n;
         if(i==0){
             printf("Initial Order: ");
             for(int i=0;i<n;i++)
