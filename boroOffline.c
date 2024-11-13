@@ -3,6 +3,7 @@
 #include<time.h>
 
 int score=0;
+int success=0;
 char str1[]="listen";
 char str2[]="earth";
 char str3[]="binary";
@@ -81,6 +82,7 @@ void Anagram_Challenge(void){
         if(string_is_same(RealWord,InputWord)){
             printf("Correct! You solved it in %d attempt(s).\n",attempt);
             score=score+10+10*(3-attempt);
+            success++;
             temp=1;
             break;
         }
@@ -128,6 +130,7 @@ void Caesar_Cipher_Challenge(void){
         if(string_is_same(phrase,InputPhrase)){
             printf("Correct! You decrypted it in %d attempt(s).\n",attempt);
             score=score+10+10*(3-attempt);
+            success++;
             temp=1;
             break;
         }
@@ -247,6 +250,7 @@ void Word_Guessing_Challenge(void){
                     printf("Correct! You guessed it in %d attempt(s) using zero utility functions.\n",attempt);
                     score=score+10+10*(3-attempt);
                 }
+                success++;
                 temp=1;
                 break;
             }
@@ -290,7 +294,7 @@ int string_length(char str[]){
     int count=0;
     while(str[count]!='\0'){
         count++;
-    }
+    }  
     return count;
 }
 
@@ -317,7 +321,7 @@ void ScrambleString(char str[]){
 }
 
 void khatam(void){
-    if(score>=26)
+    if(success==3)
         score+=5;
     printf("\nGame Over!\nYour Total score: %d points\n",score);
     return;
