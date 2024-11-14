@@ -96,7 +96,8 @@ void Anagram_Challenge(void){
 }
 
 void Caesar_Cipher_Challenge(void){
-    printf("\nStarting Caesar Cipher Challenge(Shift: 3)...\n");
+    int RandShift=(rand()%3)+1;
+    printf("\nStarting Caesar Cipher Challenge(Shift: %d)...\n",RandShift);
     getchar();
     int randPhrase=rand()%3;
     char phrase[25];
@@ -113,7 +114,6 @@ void Caesar_Cipher_Challenge(void){
     }
     int attempt=0;
     //char RealPhrase[25];
-    int RandShift=(rand()%3)+1;
     caesar_encrypt(phrase,RandShift);
     printf("Encrypted phrase: %s",phrase);
     //string_copy(RealPhrase,phrase);
@@ -146,9 +146,9 @@ void Caesar_Cipher_Challenge(void){
 void caesar_encrypt(char str[],int n){
     for(int i=0;i<string_length(str);i++){
         if(str[i]>='a' && str[i]<='z')
-            str[i]=(n+str[i]-'a')%26+'a';
+            str[i]=((n+str[i]-'a')%26)+'a';
         else if(str[i]>='A' && str[i]<='Z')
-            str[i]=(n+str[i]-'A')%26+'A';
+            str[i]=((n+str[i]-'A')%26)+'A';
     }
     return;
 }
@@ -157,9 +157,9 @@ void caesar_decrypt(char str[],int n){
     n=26-(n%26);
     for(int i=0;i<string_length(str);i++){
         if(str[i]>='a' && str[i]<='z')
-            str[i]=(n+str[i]-'a')%26+'a';
+            str[i]=((n+str[i]-'a')%26)+'a';
         else if(str[i]>='A' && str[i]<='Z')
-            str[i]=(n+str[i]-'A')%26+'A';
+            str[i]=((n+str[i]-'A')%26)+'A';
     }
     return;
 }
@@ -201,7 +201,7 @@ void Word_Guessing_Challenge(void){
                 if(!utility1){
                     printf("Enter substring: ");
                     char substring[10];
-                    scanf("%s",substring);
+                    scanf("%9s",substring);
                     if(is_substring(word,substring))
                         printf("Yes\n");
                     else
@@ -231,12 +231,16 @@ void Word_Guessing_Challenge(void){
                 scanf("%d",&option);
                 getchar();
             }
+            else{
+                printf("Invalid Input. Give input again.\n");
+                scanf("%d",&option);
+            }
         }
         if(option==1){
             attempt++;
             char InputWord[10];
             printf("Enter your guess: ");
-            scanf("%s",InputWord);
+            scanf("%9s",InputWord);
             if(string_is_same(word,InputWord)){
                 if(utility==1){
                     printf("Correct! You guessed it in %d attempt(s) using one utility functions.\n",attempt);
