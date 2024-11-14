@@ -37,7 +37,7 @@ int main(){
 }
 
 void show_menu(void){
-    printf("Welcome to the universe of words!!\n1.Start Game\n2.Exit\nEnter your choice: ");
+    printf("Welcome to the Game World!\n1.Start Game\n2.Exit\nEnter your choice: ");
     int n;
     scanf("%d",&n);
     if(n==1)
@@ -335,6 +335,6 @@ void scoring(int attempt){
 void khatam(void){
     if(success==3)
         score+=5;
-    printf("\nGame Over!\nYour Total score: %d points\n",score);
+    printf("\nGame Over!\nYour total score: %d points\n",score);
     return;
 }
