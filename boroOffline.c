@@ -27,6 +27,7 @@ void caesar_encrypt(char str[],int n);
 void caesar_decrypt(char str[],int n);
 void Word_Guessing_Challenge(void);
 int is_substring(char str[], char sub[]);
+void scoring(int attempt);
 
 int main(){
     srand(time(0));
@@ -36,7 +37,7 @@ int main(){
 }
 
 void show_menu(void){
-    printf("1.Start Game\n2.Exit\nEnter your choice: ");
+    printf("Welcome to the universe of words!!\n1.Start Game\n2.Exit\nEnter your choice: ");
     int n;
     scanf("%d",&n);
     if(n==1)
@@ -81,7 +82,7 @@ void Anagram_Challenge(void){
         attempt++;
         if(string_is_same(RealWord,InputWord)){
             printf("Correct! You solved it in %d attempt(s).\n",attempt);
-            score=score+10+10*(3-attempt);
+            scoring(attempt);
             success++;
             temp=1;
             break;
@@ -96,7 +97,7 @@ void Anagram_Challenge(void){
 }
 
 void Caesar_Cipher_Challenge(void){
-    int RandShift=(rand()%3)+1;
+    int RandShift=(rand()%25)+1;
     printf("\nStarting Caesar Cipher Challenge(Shift: %d)...\n",RandShift);
     getchar();
     int randPhrase=rand()%3;
@@ -129,7 +130,7 @@ void Caesar_Cipher_Challenge(void){
         attempt++;
         if(string_is_same(phrase,InputPhrase)){
             printf("Correct! You decrypted it in %d attempt(s).\n",attempt);
-            score=score+10+10*(3-attempt);
+            scoring(attempt);
             success++;
             temp=1;
             break;
@@ -244,15 +245,17 @@ void Word_Guessing_Challenge(void){
             if(string_is_same(word,InputWord)){
                 if(utility==1){
                     printf("Correct! You guessed it in %d attempt(s) using one utility functions.\n",attempt);
-                    score=score+10+10*(3-attempt)-2;
+                    scoring(attempt);
+                    score=score-2;
                 }
                 else if(utility==2){
                     printf("Correct! You guessed it in %d attempt(s) using two utility functions.\n",attempt);
-                    score=score+10+10*(3-attempt)-4;
+                    scoring(attempt);
+                    score=score-4;
                 }
                 else if(utility==0){
                     printf("Correct! You guessed it in %d attempt(s) using zero utility functions.\n",attempt);
-                    score=score+10+10*(3-attempt);
+                    scoring(attempt);
                 }
                 success++;
                 temp=1;
@@ -321,6 +324,11 @@ void ScrambleString(char str[]){
         str[i]=str[j];
         str[j]=temp;
     }
+    return;
+}
+
+void scoring(int attempt){
+    score=score+10+10*(3-attempt);
     return;
 }
 
