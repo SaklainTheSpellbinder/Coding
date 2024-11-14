@@ -76,9 +76,9 @@ void Anagram_Challenge(void){
     printf("Scrambled word: %s",str);
     int temp=0;
     while(attempt<3){
-        char InputWord[10];
+        char InputWord[100];
         printf("\nYour guess: ");
-        scanf("%9s",InputWord);
+        scanf("%20s",InputWord);
         attempt++;
         if(string_is_same(RealWord,InputWord)){
             printf("Correct! You solved it in %d attempt(s).\n",attempt);
@@ -121,9 +121,9 @@ void Caesar_Cipher_Challenge(void){
     caesar_decrypt(phrase,RandShift);
     int temp=0;
     while(attempt<3){
-        char InputPhrase[26];
+        char InputPhrase[100];
         printf("\nYour guess: ");
-        fgets(InputPhrase, 26, stdin);
+        fgets(InputPhrase, 50, stdin);
         int length=string_length(InputPhrase);
         if(length>0 && InputPhrase[length-1]=='\n')
             InputPhrase[length-1]='\0';
@@ -201,8 +201,8 @@ void Word_Guessing_Challenge(void){
             if(option==2){
                 if(!utility1){
                     printf("Enter substring: ");
-                    char substring[10];
-                    scanf("%9s",substring);
+                    char substring[100];
+                    scanf("%20s",substring);
                     if(is_substring(word,substring))
                         printf("Yes\n");
                     else
@@ -239,9 +239,9 @@ void Word_Guessing_Challenge(void){
         }
         if(option==1){
             attempt++;
-            char InputWord[10];
+            char InputWord[100];
             printf("Enter your guess: ");
-            scanf("%9s",InputWord);
+            scanf("%20s",InputWord);
             if(string_is_same(word,InputWord)){
                 if(utility==1){
                     printf("Correct! You guessed it in %d attempt(s) using one utility functions.\n",attempt);
