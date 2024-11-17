@@ -270,18 +270,18 @@ void Word_Guessing_Challenge(void){
     return;
 }
 
-int is_substring(char str[], char sub[]){
-    int lenStr = string_length(str);
-    int lenSub = string_length(sub);
-    if (lenSub > lenStr) { //karon sub to r main theke boro hote pare na
+int is_substring(char str[],char sub[]){
+    int lenStr=string_length(str);
+    int lenSub=string_length(sub);
+    if(lenSub>lenStr){
         return 0; 
     }
-    for (int i = 0; i <= lenStr - lenSub; i++) {
-        int j = 0;
-        while (j < lenSub && str[i + j] == sub[j]) {
+    for(int i=0;i<=(lenStr-lenSub);i++){
+        int j=0;
+        while(j<lenSub && str[i + j]==sub[j]){
             j++;
         }
-        if (j == lenSub) {
+        if(j==lenSub){
             return 1; 
         }
     }  
@@ -307,13 +307,16 @@ int string_length(char str[]){
 
 int string_is_same(char str[],char ptr[]){
     int i=0;
-    while (str[i] != '\0' && ptr[i] != '\0') {
-        if (str[i] != ptr[i]) {
+    while(str[i]!='\0' && ptr[i]!='\0'){
+        if(str[i]!= ptr[i]) {
             return 0;
         }
         i++;
     }
-    return str[i] == '\0' && ptr[i] == '\0' ? 1 : 0;
+    if(str[i]=='\0' && ptr[i]=='\0') 
+        return 1;
+    else
+        return 0;
 }
 
 void ScrambleString(char str[]){
