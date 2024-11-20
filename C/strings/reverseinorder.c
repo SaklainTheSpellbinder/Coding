@@ -22,7 +22,7 @@ void reverse(char s1[],int s,int e){
 }
 
 int main(){
-    char str[]="Tingtong";
+    char str[]="Saklain loves rra";
     int i=0;
     int start=0;
     while(str[i]!='\0'){

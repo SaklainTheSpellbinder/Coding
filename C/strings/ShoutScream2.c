@@ -1,9 +1,9 @@
 #include<stdio.h>
 int replace_count(char s1[],char s2[],char s3[],char s4[]);
 int main(){
-    char s1[100]="I like akif";
-    char s2[100]="akif";
-    char s3[100]="rra";
+    char s1[100]="akif is like akif ";
+    char s2[100]="akif ";
+    char s3[100]="sami ";
     char s4[100];
     printf("Resulting string: %s\nNumber of replacements: %d\n",s4,replace_count(s1,s2,s3,s4));
     return 0;
