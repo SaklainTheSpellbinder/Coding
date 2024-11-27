@@ -5,7 +5,7 @@ void reverseWords(char *a,char *t);
 int main(){
     char *str=(char *)malloc(1000*sizeof(char));
     char *result=(char *)malloc(1000*sizeof(char));
-    scanf("%[^\n]s",str);
+    scanf("%[^\n]",str);
     reverseWords(str,result);
     printf("%s\n",result);
     free(str);
