@@ -2,5 +2,7 @@
     "files.associations": {
         "sstream": "c",
         "regex": "c"
-    }
+    },
+    "code-runner.runInTerminal": true,
+    "exeRunner.runInFileDirectory": true
 }
