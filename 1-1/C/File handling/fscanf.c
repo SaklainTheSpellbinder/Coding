@@ -10,9 +10,18 @@ int main(){
     tuba[2].a=3,tuba[2].b=15,tuba[2].c=16;
     tuba[3].a=4,tuba[3].b=20,tuba[3].c=65;
     fp=fopen("num.bin","wb");
-    for(int i=0;i<4;i++){
-        fwrite(&tuba[i],sizeof(int),3,fp);
+    for(int i=0;i<4;i++)
+    {
+        fwrite(&tuba[i],sizeof(int),3,fp);   //fwrite(tuba+i,sizeof(int),3,fp);  or   //fwrite(&tuba[i],sizeof(struct binary),1,fp);
     }
+    /*
+    Or....
+    fwrite(tuba,sizeof(struct binary),4,fp);      &tuba[i]=&*(tuba+i);     & and * cancel out.....    &tuba[i]=tuba+i;
+    */
+
+    // {
+    //     fwrite(tuba,sizeof(int),12,fp);    //fwrite(&tuba[i],sizeof(struct binary),1,fp);
+    // }
     fclose(fp);
     fp=fopen("num.bin","rb");
     for(int i=0;i<4;i++){

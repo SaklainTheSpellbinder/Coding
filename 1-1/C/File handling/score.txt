@@ -1,3 +1,3 @@
-1. Saklain : 60
-2. Tuba : 60
-3. abbi : 80
+1. saklain : 567
+2. tuba : 6
+3. huhu : 7

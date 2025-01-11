@@ -9,7 +9,7 @@ int main(){
         printf("Enter Name:");
         scanf("%s",str);
         printf("Enter score:");
-        scanf("%d",&score);
+        scanf("%d",&score);  
         fprintf(fp,"%d. %s : %d\n",i,str,score);
     }
     rewind(fp);
@@ -20,14 +20,12 @@ int main(){
 }
 
 
-
-
-
 /*
 scanf("%*s %d",&a);
 ekhane compiler input newar shomoy first e  string input dileo count krbe na....jtkkhn na prjnto ekta 
 whitespace ashe....eta ashlei er por theke input nea start krbe
 I mean jodi ami input diy "Saklain 100" tahole shudu 100 kei input nibe integer hishebe.....moja  na??
 
+scanf fscanf sscanf shb gular jonnoi khate eta
 
 */ 
