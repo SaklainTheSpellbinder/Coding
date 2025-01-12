@@ -18,7 +18,7 @@ int main(){
     eto noob ami
     */ 
     //fp=fopen("saklain.txt","r");
-    fgets(hey,999,fp);
+    fgets(hey,999,fp);//ekta newline o input ney 
     printf("%s\n",hey);
     fscanf(fp,"%s %s %s",str,ptr,str3);
     printf("%s\n%s\n%s\n%s",hey,str,ptr,str3);
@@ -27,3 +27,5 @@ int main(){
     fclose(fp);
 }
 // last e jete hole fseek(fp,0,SEEK_END);
+// fseek(fp,0,SEEK_CUR); bortoman position ei thake
+//fseek(fp,0,SEEK_SET); shuru te chole jay

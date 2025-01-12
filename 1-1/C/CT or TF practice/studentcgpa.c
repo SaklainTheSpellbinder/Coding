@@ -15,7 +15,7 @@ int main(){
         scanf("%s",stu[i].name);
         printf("CGPA: ");
         scanf("%f",&stu[i].cg);
-    }
+    } 
     printf("\n");
     for(int i=0;i<n;i++){
         int min=i;
@@ -33,4 +33,4 @@ int main(){
     for(int i=0;i<n;i++){
         printf("%lld %s %f\n",stu[i].ID,stu[i].name,stu[i].cg);
     }
-}
+} 
