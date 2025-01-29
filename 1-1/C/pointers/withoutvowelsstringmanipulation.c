@@ -1,7 +1,6 @@
 #include<stdio.h>
 void removevowels(char *str){
     int i=0;
-    while(str[   ])
 }
 int main(){
     char* s;

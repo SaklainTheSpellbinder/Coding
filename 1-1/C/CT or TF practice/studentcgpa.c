@@ -24,7 +24,7 @@ int main(){
                 min=j;
             }
         }
-        if(min!=1){
+        if(min!=i){
             struct student temp=stu[min];
             stu[min]=stu[i];
             stu[i]=temp;

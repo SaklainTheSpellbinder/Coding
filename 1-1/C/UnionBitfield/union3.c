@@ -16,6 +16,6 @@ union charToBinary{
 
 int main(){
     //ulta hoy bcz of little endian format 
-    x.n='a';
+    x.n=2;
     printf("%d%d%d%d%d%d%d%d",x.h,x.g,x.f,x.e,x.d,x.c,x.b,x.a);
 }

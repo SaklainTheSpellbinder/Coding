@@ -8,7 +8,10 @@ int main(){
     int i;
     struct test x;
     for(i=0;i<8;i++){
-        x.c=x.b=x.a=i;
+        // x.c=x.b=x.a=i;
+        x.a = i;
+        x.b = i;
+        x.c = i;
         printf("%d %d %d\n",x.a,x.b,x.c);
     }
 }

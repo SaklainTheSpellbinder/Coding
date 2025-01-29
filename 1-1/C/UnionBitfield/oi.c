@@ -16,7 +16,7 @@ int main(){
     printf("%d %d\n",c.g.x,c.g.y);
     p.x=9;
     p.y=7;
-    //printf("%d %d",c.g.x,c.g.y);
+    //printf("%d %d\n",c.g.x,c.g.y);
     int dx=c.g.x-p.x;
     int dy=c.g.y-p.y;
     int d=(dx*dx)+(dy*dy);
