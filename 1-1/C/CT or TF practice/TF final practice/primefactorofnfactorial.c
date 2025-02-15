@@ -6,10 +6,15 @@ int main(){
     int x, i;
     scanf("%d",&x);
     for(int i=0;i<25;i++){
-        while(x%a[i]==0){
-            b[i]++;
-            x/=a[i];
+        int count=0;
+        for(int j=1;j<=x;j++){
+            int temp=j;
+            while(temp%a[i]==0){
+                count++;
+                temp/=a[i];
+            }
         }
+        b[i]=count;
     }
     for(int i=0;i<25;i++){
         if(b[i]>0){
