@@ -15,7 +15,7 @@ int main() {
     else if (strcmp(tuba, "moda") == 0)
         printf("Tuba is moda, but still lovable.\n");
     else
-        printf("Tuba defies all labels and is just Tuba.\n");
+        printf("Tuba defies all labels and is just chotto Tuba.\n");
 
     return 0;
 }

@@ -24,9 +24,11 @@ int main(){
     // }
     fclose(fp);
     fp=fopen("num.bin","rb");
+    struct binary abbi[4];
+    fread(abbi,sizeof(struct binary),4,fp);
     for(int i=0;i<4;i++){
-        fread(&tuba[i],sizeof(int),3,fp);
-        printf("a=%d b=%d c=%d\n",tuba[i].a,tuba[i].b,tuba[i].c);
+        //fread(&tuba[i],sizeof(int),3,fp);
+        printf("a=%d b=%d c=%d\n",abbi[i].a, abbi[i].b,abbi[i].c);
     }
     fclose(fp);
 }

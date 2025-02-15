@@ -2,7 +2,7 @@
 #include<string.h>
 int main(){
     FILE *fp;
-    fp=fopen("saklain.txt","w+");
+    fp=fopen("saklain.txt","r+");
     if(fp==NULL){
         printf("Not found");
     }
@@ -24,6 +24,14 @@ int main(){
     printf("%s\n%s\n%s\n%s",hey,str,ptr,str3);
     fprintf(fp,"\n");
     fputs(hey,fp);
+    fseek(fp,0,SEEK_SET);
+    char sak[100];
+    char tubagada[50];
+    char abbigada[50];
+    char chotomanush[50];
+    int tintin;
+    fscanf(fp,"%[^2]%d %s %s %s",sak,&tintin,tubagada,abbigada,chotomanush);
+    printf("\n%s %s %s %s %d\n",sak,tubagada,abbigada,chotomanush,tintin);
     fclose(fp);
 }
 // last e jete hole fseek(fp,0,SEEK_END);

@@ -6,16 +6,16 @@ int main(){
     // printf("%d\n",atoi("     -789"));
     // printf("%d\n",atoi("Hello"));
 
-    char str[] = "k123abc";
+    char str[] = "123abc";
     char *endptr;
 
-    long num = strtol(str, &endptr, 10);  // Convert with base 10
+    long num = strtol(str, &endptr, 16);  // Convert with base 16
     if (*endptr != '\0')
      {
         printf("Conversion stopped at non-numeric character: %s\n", endptr);
     }
 
-    printf("Converted number: %ld\n", num); // Output: 123
+    printf("Converted number: %#x\n", num); // Output: 123abc
 
     return 0;
 }
