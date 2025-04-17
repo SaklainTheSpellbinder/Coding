@@ -64,7 +64,8 @@ public class ConstructorOverloading {
         Book book3 = new Book("Advanced Java", 500);
         System.out.println("Book 1: "); book1.show();
         System.out.println("Book 2: "); book2.show();
-        System.out.println("Book 3: "); book3.show();                  
+        System.out.println("Book 3: "); book3.show(); 
+        System.out.printf("%d %%d\n",100,200);                 
     }
 
     public int getAge() {

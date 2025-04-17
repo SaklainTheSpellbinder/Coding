@@ -25,5 +25,9 @@ public class PolymorphismUsingInterface {
 
         s = new Square();
         s.draw();
+        
+
+        System.out.printf("%d %d\n",100,200);
+          
     }
 }
