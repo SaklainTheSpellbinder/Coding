@@ -7,7 +7,7 @@ class Parent{
         void show(){
             cout<<"parent class show..\n";
         }
-        virtual void hello(){
+        virtual void hello(){//enables runtime polymorphism
             cout<<"parent hello\n"; //derived class e redefine kora lagbei
         }
 };
@@ -26,7 +26,7 @@ class Child : public Parent {
 int main(){
     Child child1;
     Parent * ptr;
-    ptr=&child1; //run time binding
+    ptr=&child1; //run time binding   for hello() only     //for show()  it is still compiletime binding
     ptr->hello();
     ptr->show();
     child1.show();
