@@ -2,7 +2,8 @@
     "files.associations": {
         "sstream": "c",
         "regex": "c",
-        "random": "c"
+        "random": "c",
+        "iostream": "cpp"
     },
     "code-runner.runInTerminal": true,
     "exeRunner.runInFileDirectory": true
