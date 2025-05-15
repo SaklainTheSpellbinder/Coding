@@ -159,43 +159,79 @@ bool test_top(Stack* stack) {
 // TODO: Implement test for the size method
 bool test_size(Stack* stack) {
     // TODO: Implement this test case
-    return true; // Placeholder
+    stack->clear();
+    stack->push(2);
+    return stack->size()==1; // Placeholder
 }
 
 // TODO: Implement test for the empty method
 bool test_empty(Stack* stack) {
     // TODO: Implement this test case
-    return true; // Placeholder
+    stack->clear();
+    return stack->empty(); // Placeholder
 }
 
 // TODO: Implement test for the clear method
 bool test_clear(Stack* stack) {
     // TODO: Implement this test case
-    return true; // Placeholder
+    stack->clear();
+    stack->push(1);
+    stack->clear();
+    return stack->size()==0; // Placeholder
 }
 
 // TODO: Implement test for multiple push/pop operations
 bool test_multiple_push_pop(Stack* stack) {
     // TODO: Implement this test case to verify LIFO behavior with multiple elements
-    return true; // Placeholder
+    stack->clear();
+    stack->push(1);
+    stack->push(7);
+    stack->push(5);
+    stack->pop();
+    stack->push(4);
+    int popped = stack->pop();
+    return popped==4 && stack->size()==2 && stack->top()==7; // Placeholder
 }
 
 // TODO: Implement test for edge cases (empty stack operations)
 bool test_empty_stack_operations(Stack* stack) {
     // TODO: Test behavior when popping or checking top of an empty stack
-    return true; // Placeholder
+    stack->clear();
+    int popped = stack->pop();
+    int top_value = stack->top();
+    return popped==-1 && top_value==-1; // Placeholder
 }
 
 // TODO: Implement test for ArrayStack resizing
 bool test_array_resizing(Stack* stack) {
     // TODO: Test if ArrayStack properly resizes when capacity is reached
-    return true; // Placeholder
+    stack->clear();
+    for (int i=0;i<20;++i){
+        stack->push(i);
+    }
+    bool resized=stack->size()==20;
+    int top_value=stack->top();
+    stack->pop();
+    return resized && top_value==19; // Placeholder
 }
 
 // TODO: Implement test for large number of operations
 bool test_stress(Stack* stack) {
     // TODO: Test stability with a large number of push and pop operations
-    return true; // Placeholder
+    stack->clear();
+    for(int i=0;i<10000;++i){
+        stack->push(i);
+    }
+    for(int i=0;i<10000;++i){
+        stack->pop();
+    }
+    bool empty=stack->empty();
+    stack->push(1);
+    stack->push(2);
+    stack->push(3);
+    int top_value=stack->top();
+    stack->pop();
+    return empty && top_value==3 && stack->size()==2; // Placeholder
 }
 
 /**
