@@ -99,6 +99,7 @@ void ListStack::print() const {
     Node* curr=head->next;
     while(curr){
         std::cout<<", "<<curr->data;
+        curr=curr->next;
     }
     std::cout<<">\n";
 }

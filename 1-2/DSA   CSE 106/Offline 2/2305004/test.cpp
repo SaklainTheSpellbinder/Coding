@@ -189,7 +189,7 @@ bool test_multiple_push_pop(Stack* stack) {
     stack->push(5);
     stack->pop();
     stack->push(4);
-    int popped = stack->pop();
+    int popped=stack->pop();
     return popped==4 && stack->size()==2 && stack->top()==7; // Placeholder
 }
 
@@ -197,8 +197,8 @@ bool test_multiple_push_pop(Stack* stack) {
 bool test_empty_stack_operations(Stack* stack) {
     // TODO: Test behavior when popping or checking top of an empty stack
     stack->clear();
-    int popped = stack->pop();
-    int top_value = stack->top();
+    int popped=stack->pop();
+    int top_value=stack->top();
     return popped==-1 && top_value==-1; // Placeholder
 }
 
@@ -221,6 +221,9 @@ bool test_stress(Stack* stack) {
     stack->clear();
     for(int i=0;i<10000;++i){
         stack->push(i);
+        if(stack->top()!=i){
+            return false;
+        }
     }
     for(int i=0;i<10000;++i){
         stack->pop();

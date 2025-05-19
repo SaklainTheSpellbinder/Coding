@@ -80,9 +80,9 @@ void ArrayStack::print() const {
     // TODO: Print stack elements from top to bottom in the format: |elem1, elem2, ..., elemN>
     std::cout<<"|";
     if(!empty()){
-        std::cout<<data[0];
+        std::cout<<data[current_size-1];
     }
-    for(int i=1;i<current_size;i++){
+    for(int i=current_size-2;i>=0;i--){
         std::cout<<", "<<data[i];
     }
     std::cout<<">\n";
