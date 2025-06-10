@@ -124,6 +124,117 @@ istream& operator >> (istream& in,Complex& c){
     return in;
 }
 
+class Point {
+public:
+    double x, y;
+
+    Point(double x = 0, double y = 0) : x(x), y(y) {}
+
+    // Overload + operator to add two points
+    Point operator+(const Point &other) const {
+        return Point(x + other.x, y + other.y);
+    }
+
+    // Overload - operator to subtract two points
+    Point operator-(const Point &other) const {
+        return Point(x - other.x, y - other.y);
+    }
+
+    // Overload << operator for printing a point
+    friend ostream &operator<<(ostream &os, const Point &p) {
+        os << "(" << p.x << ", " << p.y << ")";
+        return os;
+    }
+};
+
+class Vector {
+private:
+    Point points[2]; // points[0] = start, points[1] = end
+
+public:
+    // Constructors
+    Vector() : points{Point(), Point()} {}
+
+    Vector(const Point &start, const Point &end) {
+        points[0] = start;
+        points[1] = end;
+    }
+
+    // Accessors
+    Point &start() { return points[0]; }
+    Point &end() { return points[1]; }
+
+    const Point &start() const { return points[0]; }
+    const Point &end() const { return points[1]; }
+
+    // Overload + operator to add two vectors (point-wise)
+    Vector operator+(const Vector &other) const {
+        return Vector(points[0] + other.points[0], points[1] + other.points[1]);
+    }
+
+    // Overload - operator to subtract two vectors (point-wise)
+    Vector operator-(const Vector &other) const {
+        return Vector(points[0] - other.points[0], points[1] - other.points[1]);
+    }
+
+    // Overload * operator for scalar multiplication (Vector * scalar)
+    Vector operator*(double scalar) const {
+        return Vector(Point(points[0].x * scalar, points[0].y * scalar),
+                      Point(points[1].x * scalar, points[1].y * scalar));
+    }
+
+    // Friend function: scalar * Vector
+    friend Vector operator*(double scalar, const Vector &v) {
+        return v * scalar; // Reuse member operator
+    }
+
+    // Overload subscript operator for const access
+    const Point &operator[](int index) const {
+        if (index == 0 || index == 1)
+            return points[index];
+        throw out_of_range("Vector index must be 0 or 1");
+    }
+
+    // Overload << operator for printing a vector
+    friend ostream &operator<<(ostream &os, const Vector &v) {
+        os << "[ " << v.points[0] << " --> " << v.points[1] << " ]";
+        return os;
+    }
+};  
+
+class Distance {
+    int meters;
+
+public:
+    Distance(int m = 0) : meters(m) {}
+
+    // class + int
+    Distance operator+(int val) const {
+        return Distance(meters + val);
+    }
+
+    // class * int
+    Distance operator*(int val) const {
+        return Distance(meters * val);
+    }
+
+    // int + class (friend function)
+    friend Distance operator+(int val, const Distance &d) {
+        return Distance(val + d.meters);
+    }
+
+    // int * class (friend function)
+    friend Distance operator*(int val, const Distance &d) {
+        return Distance(val * d.meters);
+    }
+
+    // print helper
+    friend ostream &operator<<(ostream &os, const Distance &d) {
+        os << d.meters << " meters";
+        return os;
+    }
+};
+
 
 class IntArray{
     int* data;
