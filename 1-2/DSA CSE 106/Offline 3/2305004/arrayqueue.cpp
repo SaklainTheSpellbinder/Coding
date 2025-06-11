@@ -54,7 +54,7 @@ int ArrayQueue::dequeue()
         front_idx=(front_idx+1)%capacity;
     }
     if(4*size()<=capacity){
-        resize(max(capacity/2,2));;
+        resize(capacity/2);
     }
     return temp;
 }
@@ -144,6 +144,7 @@ void ArrayQueue::resize(int new_capacity)
     if(new_capacity<2){
         new_capacity=2;
     }
+    int oldsize=size();
     int* temp=new int[new_capacity];
     int j=front_idx;
     for(int i=0;i<size();i++){
@@ -151,7 +152,7 @@ void ArrayQueue::resize(int new_capacity)
         j=(j+1)%capacity;
     }
     capacity=new_capacity;
-    rear_idx=size()-1;
+    rear_idx=oldsize-1;
     if(rear_idx==-1){
         front_idx=-1;
     }

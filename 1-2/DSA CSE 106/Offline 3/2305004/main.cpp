@@ -49,7 +49,7 @@ int main()
     cin >> N;
 
     bool merged=false;
-    vector<int>arr(10001);
+    int arr[10001];
 
     for (int i = 1; i <= N; i++)
     {
@@ -226,5 +226,8 @@ int main()
         }
     }
 
+    delete Q1;
+    delete Q2;
+    delete Q;
     return 0;
 }
