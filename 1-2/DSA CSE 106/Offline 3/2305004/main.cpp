@@ -33,8 +33,8 @@ int randomQueue(int seed = -1)
 
 int main()
 {
-    freopen("test_input_1.txt", "r", stdin); // Test Case 1
-    // freopen("test_input_2.txt", "r", stdin); // Test Case 2
+    //freopen("test_input_1.txt", "r", stdin); // Test Case 1
+     freopen("test_input_2.txt", "r", stdin); // Test Case 2
     freopen("output.txt", "w", stdout);
     // Initialize the random generator with a fixed seed
     // You should set the seed only once at the beginning of your program

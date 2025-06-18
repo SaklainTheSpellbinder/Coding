@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Java Intellij.iml" filepath="$PROJECT_DIR$/Java Intellij.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaNiyePaglami/JavaNiyePaglami.iml" filepath="$PROJECT_DIR$/JavaNiyePaglami/JavaNiyePaglami.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Online Er Jonno Practice/Online Er Jonno Practice.iml" filepath="$PROJECT_DIR$/Online Er Jonno Practice/Online Er Jonno Practice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Online22A/Online22A.iml" filepath="$PROJECT_DIR$/Online22A/Online22A.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PackageAndInterface/PackageAndInterface.iml" filepath="$PROJECT_DIR$/PackageAndInterface/PackageAndInterface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PracticeBank/PracticeBank.iml" filepath="$PROJECT_DIR$/PracticeBank/PracticeBank.iml" />
+    </modules>
+  </component>
+</project>
