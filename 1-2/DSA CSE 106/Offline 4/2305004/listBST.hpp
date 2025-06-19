@@ -32,7 +32,175 @@ private:
     
     // TODO: Implement private helper functions as needed
     // Start your private helper functions here
+
+    bool insertHelper(Node* &root,Key key,Value value){
+        if(!root){
+            root=new Node(key,value);
+            node_count++;
+            return true;
+        }
+        if(key<root->key){
+            return insertHelper(root->left,key,value);
+        }
+        else if(key>root->key){
+            return insertHelper(root->right,key,value);
+        }
+        else{
+            return false;
+        }
+    }
+
+    bool removeHelper(Node* &root,Key key){
+        if(!root){
+            return false;
+        }
+        if(key<root->key){
+            return removeHelper(root->left,key);
+        }
+        else if(key>root->key){
+            return removeHelper(root->right,key);
+        }
+        else{
+            if(!root->left && !root->right){
+                delete root;
+                root=NULL;
+                node_count--;
+            }
+            else if(!root->left){
+                Node* temp=root;
+                root=root->right;
+                delete temp;
+                node_count--;
+            }
+            else if(!root->right){
+                Node* temp=root;
+                root=root->left;
+                delete temp;
+                node_count--;
+            }
+            else{
+                Node* minParent=root;
+                Node* minNode=root->right;
+                while(minNode->left){
+                    minParent=minNode;
+                    minNode=minNode->left;
+                }
+                root->key=minNode->key;
+                root->value=minNode->value;
+                if(minParent==root){
+                    minParent->right=minNode->right;
+                }
+                else{
+                    minParent->left=minNode->right;
+                }
+                delete minNode;
+                node_count--;
+            }
+            return true;
+        }
+    }
+
+    bool findHelper(Node* root,Key key) const{
+        if(!root){
+            return false;
+        }
+        if(key==root->key){
+            return true;
+        }
+        else if(key<root->key){
+            return findHelper(root->left,key);
+        }
+        else{
+            return findHelper(root->right,key);
+        }
+    }
     
+    Value getHelper(Node* root,Key key) const{
+        if(!root){
+            throw std::runtime_error("Key is not found.");
+        }
+        if(key==root->key){
+            return root->value;
+        }
+        else if(key<root->key){
+            return getHelper(root->left,key);
+        }
+        else{
+            return getHelper(root->right,key);
+        }
+    }
+
+    void updateHelper(Node* &root,Key key,Value value){
+        if(!root){
+            throw std::runtime_error("Key is not found.");
+        }
+        if(key==root->key){
+            root->value=value;
+            return;
+        }
+        else if(key<root->key){
+            updateHelper(root->left,key,value);
+        }
+        else{
+            updateHelper(root->right,key,value);
+        }
+    }
+
+    void cleanHelper(Node* &root){
+        if(!root)
+            return;
+        cleanHelper(root->left);
+        cleanHelper(root->right);
+        delete root;
+        root=NULL;
+    }
+
+    void preorder(Node* root) const{
+        if(!root){
+            return;
+        }
+        std::cout<<"("<<root->key<<":"<<root->value<<") ";
+        preorder(root->left);
+        preorder(root->right);
+    }
+
+    void inorder(Node* root) const{
+        if(!root){
+            return;
+        }
+        inorder(root->left);
+        std::cout<<"("<<root->key<<":"<<root->value<<") ";
+        inorder(root->right);
+    }
+
+    void postorder(Node* root) const{
+        if(!root){
+            return;
+        }
+        postorder(root->left);
+        postorder(root->right);
+        std::cout<<"("<<root->key<<":"<<root->value<<") ";
+    }
+
+    void defaultprint(Node* root) const{
+        if(!root){
+            return;
+        }
+        std::cout<<" ("<<root->key<<":"<<root->value;
+        if(!root->left && !root->right){
+            std::cout<<")";
+            return;
+        }
+        else if(!root->left){
+            std::cout<<" ()";
+            defaultprint(root->right);
+        }
+        else{
+            defaultprint(root->left);
+            defaultprint(root->right);
+        }
+        std::cout<<")";
+    }
     // End your private helper functions here
 
 public:
@@ -46,7 +214,7 @@ public:
      */
     ~ListBST() {
         // TODO: Implement destructor to free memory
-
+        clear();
     }
     
     /**
@@ -54,7 +222,7 @@ public:
      */
     bool insert(Key key, Value value) override {
         // TODO: Implement insertion logic
-
+        return insertHelper(root,key,value);
     }
     
     /**
@@ -62,7 +230,7 @@ public:
      */
     bool remove(Key key) override {
         // TODO: Implement removal logic
-
+        return removeHelper(root,key);
     }
     
     /**
@@ -70,7 +238,7 @@ public:
      */
     bool find(Key key) const override {
         // TODO: Implement find logic
-
+        return findHelper(root,key);
     }
 
     /**
@@ -78,7 +246,7 @@ public:
      */
     Value get(Key key) const override {
         // TODO: Implement get logic
-
+        return getHelper(root,key);
     }
 
     /**
@@ -86,7 +254,7 @@ public:
      */
     void update(Key key, Value value) override {
         // TODO: Implement update logic
-
+        updateHelper(root,key,value);
     }
 
     /**
@@ -94,7 +262,9 @@ public:
      */
     void clear() override {
         // TODO: Implement clear logic
-
+        cleanHelper(root);
+        root=NULL;
+        node_count=0;
     }
     
     /**
@@ -102,7 +272,7 @@ public:
      */
     size_t size() const override {
         // TODO: Implement size logic
-
+        return node_count;
     }
     
     /**
@@ -110,7 +280,7 @@ public:
      */
     bool empty() const override {
         // TODO: Implement empty check logic
-
+        return root==NULL;
     }
     
     /**
@@ -118,7 +288,14 @@ public:
      */
     Key find_min() const override {
         // TODO: Implement find_min logic
-
+        if(!root){
+            throw std::runtime_error("Tree is empty.");
+        }
+        Node* current=root;
+        while(current->left){
+            current=current->left;
+        }
+        return current->key;
     }
     
     /**
@@ -126,7 +303,14 @@ public:
      */
     Key find_max() const override {
         // TODO: Implement find_max logic
-
+        if(!root){
+            throw std::runtime_error("Tree is empty.");
+        }
+        Node* current=root;
+        while(current->right){
+            current=current->right;
+        }
+        return current->key;
     }
 
     /**
@@ -134,7 +318,26 @@ public:
      */
     void print(char traversal_type = 'D') const override {
         // TODO: Implement print logic
-        
+        if(traversal_type=='D' || traversal_type=='d'){
+            std::cout<<"BST (Default):";
+            defaultprint(root);
+        }
+        else if(traversal_type=='I' || traversal_type=='i'){
+            std::cout<<"BST (In-order): ";
+            inorder(root);
+        }
+        else if(traversal_type=='P' || traversal_type=='p'){
+            std::cout<<"BST (Pre-order): ";
+            preorder(root);
+        }
+        else if(traversal_type=='O' || traversal_type=='o'){
+            std::cout<<"BST (Post-order): ";
+            postorder(root);
+        }
+        else{
+            throw std::invalid_argument("Not a valid argument to print");
+        }
+        std::cout<<"\n";
     }
     
 };

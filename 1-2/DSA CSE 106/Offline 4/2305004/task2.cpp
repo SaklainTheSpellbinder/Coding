@@ -32,19 +32,39 @@ int main(int argc, char **argv) {
     for (int i = 0; i < n; ++i) {
         // TODO: Implement the logic to read Phil's words
         // Start your code here
-
+        string str;
+        in_file>>str;
+        if(bst1->find(str)){
+            int temp=bst1->get(str);
+            bst1->update(str,temp+1);
+        }
+        else{
+            bst1->insert(str,1);
+        }
         // End your code here
     }
     for (int i = 0; i < n; ++i) {
         // TODO: Implement the logic to read Claire's words
         // Start your code here
-
+        string str;
+        in_file>>str;
+        if(bst2->find(str)){
+            int temp=bst2->get(str);
+            bst2->update(str,temp+1);
+        }
+        else{
+            bst2->insert(str,1);
+        }
         // End your code here
     }
 
     // TODO: Implement the logic to print the initial state of both hands
     // Start your code here
-
+    cout<<"Phil's words:\n";
+    bst1->print('I');
+    cout<<"\n";
+    cout<<"Claire's words:\n";
+    bst2->print('I');
     // End your code here
     cout << "\nGame starts!\n\n";
     cout << "==============================\n";
@@ -55,6 +75,47 @@ int main(int argc, char **argv) {
         
         // TODO: Implement the logic to process the game turn and print both hands after each turn
         // Start your code here
+        if(bst1->find(word)){
+            cout<<"Phil has "<<word<<"!\n";
+            int temp=bst1->get(word);
+            if(temp==1){
+                bst1->remove(word);
+            }
+            else{
+                bst1->update(word,temp-1);
+            }
+        }
+        if(bst2->find(word)){
+            cout<<"Claire has "<<word<<"!\n";
+            int temp=bst2->get(word);
+            if(temp==1){
+                bst2->remove(word);
+            }
+            else{
+                bst2->update(word,temp-1);
+            }
+        }
+
+        if(bst1->empty() && bst2->empty()){
+            cout<<"It's a tie\n";
+            break;
+        }
+        else if(bst1->empty()){
+            cout<<"Phil wins!\n";
+            break;
+        }
+        else if(bst2->empty()){
+            cout<<"Claire wins!\n";
+            break;
+        }
+        else{
+            cout<<"\nPhil's remaining words:\n";
+            bst1->print('I');
+            cout<<"\n";
+            cout<<"Claire's remaining words:\n";
+            bst2->print('I');
+            cout<<"\n";
+        }
 
         // End your code here
         cout << "==============================\n";
