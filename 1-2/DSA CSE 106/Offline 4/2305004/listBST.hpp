@@ -289,7 +289,7 @@ public:
     Key find_min() const override {
         // TODO: Implement find_min logic
         if(!root){
-            throw std::runtime_error("Tree is empty.");
+            throw std::runtime_error("Tree is empty. So no minimum.");
         }
         Node* current=root;
         while(current->left){
@@ -304,7 +304,7 @@ public:
     Key find_max() const override {
         // TODO: Implement find_max logic
         if(!root){
-            throw std::runtime_error("Tree is empty.");
+            throw std::runtime_error("Tree is empty. So, no maximum.");
         }
         Node* current=root;
         while(current->right){

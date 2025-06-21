@@ -30,60 +30,86 @@ int main(int argc, char **argv) {
         if(c=='F'){
             in_file>>val;
             if(bst->find(val)){
-                std::cout<<"Key "<<val<<" found in BST.\n";
+                cout<<"Key "<<val<<" found in BST.\n";
             }
             else{
-                std::cout<<"Key "<<val<<" not found in BST.\n";
+                cout<<"Key "<<val<<" not found in BST.\n";
             }
         }
         else if(c=='E'){
-            bst->clear();
-            std::cout<<"Empty\n";
+            if(bst->empty())
+                cout<<"Empty\n";
+            else
+                cout<<"Not Empty\n";
         }
         else if(c=='I'){
             in_file>>val;
             if(bst->insert(val,val)){
-                std::cout<<"Key "<<val<<" inserted into BST, ";
+                cout<<"Key "<<val<<" inserted into BST, ";
             }
             else{
-                std::cout<<"Insertion failed! Key "<<val<<" already exists in BST, ";
+                cout<<"Insertion failed! Key "<<val<<" already exists in BST, ";
             }
-            bst->print();
+            try{
+                bst->print();
+            }
+            catch(const invalid_argument &e){
+                cerr<<"Error: "<<e.what()<<endl;
+            }
         }
         else if(c=='M'){
-            string temp;
-            in_file>>temp;
-            if(temp=="Min"){
-                std::cout<<"Minimum value: "<<bst->find_min()<<"\n";
+            in_file>>str;
+            try{
+                if(str[0]=='M' && str[1]=='i' && str[2]=='n'){
+                    cout<<"Minimum value: "<<bst->find_min()<<"\n";
+                }
+                else if(str[0]=='M' && str[1]=='a' && str[2]=='x'){
+                    cout<<"Maximum value: "<<bst->find_max()<<"\n";
+                }
+                else{
+                    throw runtime_error("Not a valid command");
+                }
             }
-            else if(temp=="Max"){
-                std::cout<<"Maximum value: "<<bst->find_max()<<"\n";
+            catch(const runtime_error &e){
+                cerr<<"Error: "<<e.what()<<endl;
             }
         }
         else if(c=='D'){
             in_file>>val;
             if(bst->remove(val)){
-                std::cout<<"Key "<<val<<" removed from BST, ";
+                cout<<"Key "<<val<<" removed from BST, ";
             }
             else{
-                std::cout<<"Removal failed! Key "<<val<<" not found in BST, ";
+                cout<<"Removal failed! Key "<<val<<" not found in BST, ";
             }
-            bst->print();
+            try{
+                bst->print();
+            }
+            catch(const invalid_argument &e){
+                cerr<<"Error: "<<e.what()<<endl;
+            }
         }
         else if(c=='S'){
-            std::cout<<"Size: "<<bst->size()<<"\n";
+            cout<<"Size: "<<bst->size()<<"\n";
         }
         else if(c=='T'){
-            string temp;
-            in_file>>temp;
-            if(temp=="In"){
-                bst->print('I');
+            in_file>>str;
+            try{
+                if(str[0]=='I' && str[1]=='n'){
+                    bst->print('I');
+                }
+                else if(str[0]=='P' && str[1]=='r' && str[2]=='e'){
+                    bst->print('P');
+                }
+                else if(str[0]=='P' && str[1]=='o' && str[2]=='s' && str[3]=='t'){
+                    bst->print('O');
+                }
+                else{
+                    throw invalid_argument("Not a valid traversal");
+                }
             }
-            else if(temp=="Pre"){
-                bst->print('P');
-            }
-            else if(temp=="Post"){
-                bst->print('O');
+            catch(const invalid_argument &e){
+                cerr<<"Error: "<<e.what()<<endl;
             }
         }
         // End your code here
