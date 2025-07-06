@@ -1,0 +1,62 @@
+public class VarArgsTest {
+    void vaTest(int ... v){
+        System.out.println("Int");
+        for(int  x: v) {
+            System.out.print(x + " ");
+        }
+        System.out.println();
+    }
+
+    void vaTest(double ... v){
+        System.out.println("Int");
+        for(double  x: v) {
+            System.out.print(x + " ");
+        }
+        System.out.println();
+    }
+
+    static void vaTest(boolean ... v){
+        System.out.println("Boolean");
+        for(boolean x: v) {
+            System.out.print(x + " ");
+        }
+        System.out.println();
+    }
+
+    static void vaTest(String msg, int ... v){
+        System.out.println("String, Int");
+        System.out.print(msg + " ");
+        for(int x: v) {
+            System.out.print(x + " ");
+        }
+        System.out.println();
+    }
+
+    static void vaTest(String msg, boolean  ... v){
+        System.out.println("String, Boolean");
+        System.out.print(msg + " ");
+        for(boolean x: v) {
+            System.out.print(x + " ");
+        }
+        System.out.println();
+    }
+
+    
+    /*static void vaTest(int n, int ... v){
+        System.out.println("Int, Int");
+        for(int x: v) {
+            System.out.println(x + " ");
+        }
+    }*/
+
+
+
+    public static void main(String[] args) {
+        vaTest("Testing", 10, 20);
+        vaTest("Hehe",true,false);
+        vaTest(true, false, false);
+        VarArgsTest st=new VarArgsTest();
+        //vaTest(); // ambiguity type 1
+        st.vaTest(1, 2, 3); // ambiguity type 2 with vaTest(int n, int ... v) and vaTest(int ... v)
+    }
+}
