@@ -8,7 +8,7 @@ class SharedCounter2 {
     }
 
     public void increment() {
-        this.counter++;
+        this.counter++;//ekhane synchronized(this) likhle o hobe
     }
 
     public int get() {
@@ -33,7 +33,7 @@ class ThreadCounterSyncBlock implements Runnable {
     }
 
     public void run() {
-        synchronized(sharedCounter) {
+        synchronized(sharedCounter) {//synchronized er moddhe this dile hobe na....tahole to just ei object kei lock korbe....but amader to shared jinish ta ke lock korte hobe//common lock
          sharedCounter.count();
         }
     }

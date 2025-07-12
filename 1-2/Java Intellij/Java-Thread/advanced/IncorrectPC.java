@@ -2,13 +2,33 @@ package advanced;
 
 class Buffer {
     int value;
-
-    synchronized int consume() {
+    volatile boolean valueset=false;
+    synchronized  int consume() {
+        while(!valueset){
+            try {
+                wait();
+            } catch (InterruptedException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+        }
+        valueset=false;
+        notifyAll();
         System.out.println(Thread.currentThread().getName() + " consumes: " + value);
         return value;
     }
 
     synchronized void produce(int value) {
+        while(valueset){
+            try {
+                wait();
+            } catch (InterruptedException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+        }
+        valueset=true;
+        notifyAll();
         this.value = value;
         System.out.println(Thread.currentThread().getName() + " produces: " + this.value);
     }
@@ -26,11 +46,11 @@ class Producer implements Runnable {
         int i = 0;
         while (i < 100) {
             buffer.produce(i++);
-            try {
-                Thread.sleep(2000);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
+            // try {
+            //     Thread.sleep(2000);
+            // } catch (InterruptedException e) {
+            //     throw new RuntimeException(e);
+            // }
         }
     }
 }
@@ -47,11 +67,11 @@ class Consumer implements Runnable {
         int i = 0;
         while (i++ < 100) {
             buffer.consume();
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
+            // try {
+            //     Thread.sleep(1000);
+            // } catch (InterruptedException e) {
+            //     throw new RuntimeException(e);
+            // }
         }
     }
 }

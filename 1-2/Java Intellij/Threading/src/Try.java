@@ -4,9 +4,9 @@ public class Try {
     }
 
     class c2 implements i1 {
-        // static void f3() {
-        //     System.out.println("c2's f3");
-        // }
+        static void f3() {
+            System.out.println("c2's f3");
+        }
     }
 
     public static void main(String[] args) {

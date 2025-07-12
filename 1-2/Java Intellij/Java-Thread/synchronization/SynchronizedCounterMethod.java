@@ -23,18 +23,19 @@ class SharedCounter1 {
 }
 
 class ThreadCounterSyncMethod implements Runnable {
-    SharedCounter1 sharedCounter;
+    SharedCounter1 s;
     Thread t;
 
-    public ThreadCounterSyncMethod(SharedCounter1 s, String name) {
-        sharedCounter = s;
-        t = new Thread(this, name);
+    public ThreadCounterSyncMethod(SharedCounter1 s, String str) {
+        this.s = s;
+        this.t = new Thread(this,str);
         t.start();
     }
 
-    public void run() {
-        sharedCounter.count();
+    public void run(){
+        s.count();
     }
+
 }
 
 public class SynchronizedCounterMethod {
