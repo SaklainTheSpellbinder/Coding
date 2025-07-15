@@ -54,13 +54,13 @@ public class Deadlock implements Runnable {
     }
 
     void deadlockStart() {
-        t.start();
-        a.foo(b);
+        t.start();//racing thread start holo
+        a.foo(b);//main thread bhai ekhane chole jay....a te lock boshay...but b.last() call korte pare na karon racing thread bhai b te lock boshay rakhse and last() ekti syunchronized block so wait
         System.out.println("Back in advanced.Main Thread");
     }
 
     public void run() {
-        b.bar(a);
+        b.bar(a);//racing thread bhai ekhane chole jay....b te lock boshay...but a.last() call korte pare na karon main thread bhai a te lock boshay rakhse and last() ekti syunchronized block so wait
         System.out.println("Back in Racing Thread");
     }
 

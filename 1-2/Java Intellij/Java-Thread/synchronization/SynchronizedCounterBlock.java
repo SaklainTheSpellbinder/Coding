@@ -7,9 +7,9 @@ class SharedCounter2 {
         this.counter = 0;
     }
 
-    public void increment() {
+    public void increment() {//or etay sunchronized modifier lagano jay
         this.counter++;//ekhane synchronized(this) likhle o hobe
-    }
+    }   //ekhane likhle oita more efficient karon pera to just ei counter ee dicche onnogula to pera na
 
     public int get() {
         return this.counter;

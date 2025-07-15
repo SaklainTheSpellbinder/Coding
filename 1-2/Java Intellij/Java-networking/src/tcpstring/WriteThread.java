@@ -22,7 +22,7 @@ public class WriteThread implements Runnable {
         try {
             Scanner input = new Scanner(System.in);
             while (true) {
-                System.out.println("Enter a message to send: ");
+                //System.out.println("Enter a message to send: ");
                 String s = input.nextLine();
                 socketWrapper.write(name + ":" + s);
             }

@@ -18,7 +18,7 @@ public class ReadThread implements Runnable {
         try {
             while (true) {
                 String s = (String) socketWrapper.read();
-                System.out.println("Received: " + s);
+                System.out.println(s);
             }
         } catch (Exception e) {
             System.out.println(e);

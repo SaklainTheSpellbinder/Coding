@@ -5,10 +5,11 @@ interface Alpha
     }
 }
 
-interface Beta //extends Alpha
+interface Beta extends Alpha
 {
     default void reset() {
         System.out.println("Beta's reset");
+        Alpha.super.reset();
     }
 }
 public class InterfaceMultipleInheritanceTest implements Alpha, Beta {

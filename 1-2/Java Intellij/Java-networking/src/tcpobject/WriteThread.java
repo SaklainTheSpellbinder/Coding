@@ -23,7 +23,7 @@ public class WriteThread implements Runnable {
             int i = 1;
             Scanner input = new Scanner(System.in);
             while (true) {
-                System.out.println("Enter a message to send: ");
+                //System.out.println("Enter a message to send: ");
                 String s = input.nextLine();
                 Data d = new Data();
                 d.setId(i);

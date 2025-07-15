@@ -6,7 +6,7 @@ class NewThread2 extends Thread {
         super("Extends Thread");
         //start();
     }
-
+//start dile run call hoy.....but alada kore....emon na je etar pore ja kora hoise ogula cholbe na eta shesh na howa porjonto
     // This is the entry point for the thread.
     @Override
     public void run() {
@@ -27,7 +27,7 @@ class NewThread2 extends Thread {
 public class ExtendsThread {
     public static void main(String[] args) throws Exception {
         NewThread2 newThread2 = new NewThread2();
-        //newThread2.start();
+        //newThread2.start(); eta dilei khali ekshate cholbe....run call dile just emne func er moto kaj korbe....oita thread na
         newThread2.run();//eta thread hobe na....eta aage child run hobe then child run shesh hobe then main er baaki gula cholbe....
         for (int i = 500; i > 0; i--) {
             System.out.println("Main Thread: " + i);

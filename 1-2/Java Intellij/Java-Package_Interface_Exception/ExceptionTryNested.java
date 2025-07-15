@@ -14,7 +14,7 @@ public class ExceptionTryNested {
                     System.out.println(e);
                     a = 0;
                 } finally {
-                    System.out.println(i + ": " + a);
+                    System.out.println(i + ": " + 0);
                 }
         } catch (ArithmeticException e) {
             System.out.println(e);

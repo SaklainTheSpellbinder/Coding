@@ -20,7 +20,7 @@ class NewThreadSR implements Runnable {
             for (int i = 15; i > 0; i--) {
                 System.out.println(name + ": " + i);
                 Thread.sleep(200);
-                synchronized (this) {
+                synchronized (this) {//nijer object ei lock mere boshe ache lol.....onno keo etar monitor e eshe(actually mainthread by calling myresume ) notify na dile eta wait ei thakbe....mane etar run ee cholbe na totokkhon
                     while (suspendFlag) {
                         wait();
                     }
@@ -34,13 +34,19 @@ class NewThreadSR implements Runnable {
 
     synchronized void mySuspend() {
         suspendFlag = true;
-    }
+    }//eta mainly main class er je implicit thread ache oita ekhane dhuke and tai synchronized lagbe
+    //monitor on this object.....ekhon main eshe etay notify diye chole jay,,,,er madhhomei mainly ei thread ti wait theke ber hote pare
 
     synchronized void myResume() {
         suspendFlag = false;
         notify();
     }
 }
+//wait bhai er kaj->
+//tells the calling thread to give up the monitor and go to
+//sleep until some other thread enters the same monitor
+//and calls notify( ) or notifyAll()
+//mainly same monitor e (same object er any synchronized method or oi object er block) abar keo dhuke notify dilei hoye jabe
 
 public class SuspendResume {
     public static void main(String[] args) {

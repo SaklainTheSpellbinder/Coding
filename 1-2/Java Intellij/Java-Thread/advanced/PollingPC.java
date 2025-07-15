@@ -4,20 +4,30 @@ class PollingBuffer {
     int value;
     volatile boolean valueSet = false;
 
-    void consume() {
+    synchronized void  consume() {
         while (!valueSet) {
-
+            try {
+                wait();
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
         }
         valueSet = false;
+        notifyAll();
         System.out.println(Thread.currentThread().getName() + " consumes: " + value);
     }
 
-    void produce(int value) {
+    synchronized void produce(int value) {
         while (valueSet) {
-
+            try {
+                wait();
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
         }
         this.value = value;
         this.valueSet = true;
+        notifyAll();
         System.out.println(Thread.currentThread().getName() + " produces: " + this.value);
     }
 }
