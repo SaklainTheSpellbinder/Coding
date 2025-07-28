@@ -30,6 +30,12 @@ class MoreGechi extends MoreJao{
     }
 }
 
+interface tintin{
+    static void f1(){
+        System.out.println("hello");
+    }
+}
+
 public class SimpleInheritance {
     public static void main(String[] args) {
         A superOb = new A();
@@ -46,6 +52,8 @@ public class SimpleInheritance {
 
         MoreJao m=new MoreGechi();
         m.f1();
+
+        tintin.f1();
 
         //MoreJao jodi interface hoto tahole m ke evabe m.f1() lekha jeto na....karon interface er shomoy just interface er nam diyei static call kora jaabe...no instance
     }

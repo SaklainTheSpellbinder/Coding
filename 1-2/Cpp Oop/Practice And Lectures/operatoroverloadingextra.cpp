@@ -293,6 +293,8 @@ public:
 
     class Inner{
         int b;
+        //Outer oa=Outer(2); //not possible
+        Outer* ot;//allowed
     public:
         Inner(int y){
             b=y;
@@ -362,9 +364,9 @@ int main(){
     cout << "First element (const): " << constArr[0] << endl;  // Read-only
 
     // MyClass ob1(10);        // OK: direct initialization using explicit constructor
-    // //MyClass ob2 = 20;       // **Error**: copy initialization using `explicit` constructor (not allowed)
+    //MyClass ob2 = 20;       // **Error**: copy initialization using `explicit` constructor (not allowed)
     // MyClass ob3("40");      // OK: implicit conversion from `const char*` to `Myclass`
-    // MyClass ob4 = "60";  
+     MyClass ob4 = "60";  
 
     Outer outer(10);
     outer.show();

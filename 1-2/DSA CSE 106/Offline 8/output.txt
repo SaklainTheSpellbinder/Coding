@@ -1,0 +1,9 @@
+Global Alignment:
+TGTTCCGCCT
+-G-GCTG-C-
+Maximum Score: 4
+
+Local Alignment:
+CCGC
+CTGC
+Maximum Score: 13

@@ -2,6 +2,7 @@ package collections;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 class MyClass {
     private int id;
@@ -48,6 +49,24 @@ public class ArrayListDemo3 {
             MyClass mc = al.get(i);
             System.out.println(mc.getId() + ", " + mc.getName());
         }
-        System.out.println("");
+        System.out.println();
+
+        List<String> names=new ArrayList<>();
+        for(int i=0;i<al.size();i++){
+            MyClass mc=al.get(i);
+            names.add(mc.getName());
+        }
+
+        al.set(2, new MyClass(7, "Rodgers"));
+
+
+        //streams
+        List<String> nameList=al.parallelStream().map(MyClass::getName).collect(Collectors.toList());  //stream dile ekta thread e korbe....parallelStream e dile koekta use korbe jvm
+        nameList.forEach(e->System.out.print(e+" "));
+        System.out.println();
+
+        List<Integer> evenIdList=al.stream().map(MyClass::getId).filter(e -> (e%2==0)).collect(Collectors.toList());
+        evenIdList.forEach(e->System.out.print(e+" "));
+        System.out.println();
     }
 }

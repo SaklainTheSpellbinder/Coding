@@ -11,7 +11,7 @@ public class Server {
 
     Server() {
         try {
-            serverSocket = new ServerSocket(44444);
+            serverSocket=new ServerSocket(44444);
             while (true) {
                 Socket clientSocket = serverSocket.accept();
                 serve(clientSocket);

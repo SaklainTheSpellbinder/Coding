@@ -1,5 +1,6 @@
 package collections;
 
+import java.util.Enumeration;
 import java.util.Hashtable;
 
 class HashTableDemo {
@@ -20,6 +21,12 @@ class HashTableDemo {
             System.out.println("Key: " + key + ", Value: " + balance.get(key));
         }
         System.out.println();
+
+        Enumeration<String> itr=balance.keys();
+        while(itr.hasMoreElements()){
+            String str=itr.nextElement();
+            System.out.println(str+ " " +balance.get(str) );
+        }
 
         String key = "John Doe";
         // Deposit 1,000 into John Doe's account

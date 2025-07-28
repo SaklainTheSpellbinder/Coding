@@ -12,6 +12,9 @@ public:
 
 class Circle: public Shape{
 public:
+    void tintin(){
+        cout<<"inside tintin"<<endl;
+    }
     void draw(){
         cout<<"Drawing Circle"<<endl;
     }
@@ -27,9 +30,11 @@ int main(){
     //Shape s;    cannot do karon etate Shape hocche ekta abstract class etar kono object declare kora jay na
     Circle c;
     Shape* ptr= &c;
+    //Square s; etao abnstract class
 
     ptr->draw();//runtime binding
     ptr->common();
+    ((Circle*)ptr)->tintin();
     return 0;
 }
 

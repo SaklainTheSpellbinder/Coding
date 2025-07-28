@@ -4,39 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cd412a3-0ef9-4621-b35f-64e4e21a11b6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Java-networking/src/HouseOfTheDeads/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Java-networking/src/HouseOfTheDeads/ReadThreadClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Java-networking/src/HouseOfTheDeads/ReadThreadServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Java-networking/src/HouseOfTheDeads/Server.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Java-networking/src/HouseOfTheDeads/WriteThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java-networking/src/tcpobject/WriteThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Java-networking/src/tcpobject/WriteThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java-networking/src/tcpstring/ReadThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Java-networking/src/tcpstring/ReadThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java-networking/src/tcpstring/WriteThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Java-networking/src/tcpstring/WriteThread.java" afterDir="false" />
-    </list>
+    <list default="true" id="40965864-9ad3-458c-a76f-0c3531099477" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
-  </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "SaklainTheSpellbinder"
-  }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/SaklainTheSpellbinder/Coding.git",
-    "accountId": "52640991-fabe-4d3c-b663-57e4a51063ed"
-  }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2zrNXcF8ITQ3wJqSwKujWjXnVCH" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -44,11 +20,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Client.executor": "Run",
+    "Application.Server.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/TestingInternet",
+    "last_opened_file_path": "D:/Coding/1-2/Java Intellij/Java-Package_Interface_Exception",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -57,11 +34,6 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Coding\1-2\Java Intellij\TestingInternet\src" />
-    </key>
-  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -73,12 +45,14 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="4cd412a3-0ef9-4621-b35f-64e4e21a11b6" name="Changes" comment="" />
-      <created>1752485274465</created>
+      <changelist id="40965864-9ad3-458c-a76f-0c3531099477" name="Changes" comment="" />
+      <created>1752485612642</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1752485274465</updated>
-      <workItem from="1752485275605" duration="335000" />
+      <updated>1752485612642</updated>
+      <workItem from="1752485613725" duration="1115000" />
+      <workItem from="1752486782329" duration="977000" />
+      <workItem from="1752488980059" duration="63000" />
     </task>
     <servers />
   </component>

@@ -1,16 +1,18 @@
-package HouseOfTheDeads;
+package HouseOfTheDeads2;
+
+import util.SocketWrapper;
 
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.HashMap;
-import util.SocketWrapper;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class Server {
     ServerSocket serversocket;
-    HashMap clientMap;
+    ConcurrentHashMap clientMap;
     Server(){
-        clientMap=new HashMap();
+        clientMap=new ConcurrentHashMap();
         try{
             serversocket=new ServerSocket(55555);
             while(true){
@@ -35,6 +37,6 @@ public class Server {
         String clientName=(String) socketWrapper.read();
         clientMap.put(clientName,socketWrapper);
         System.out.println("Client "+clientName+" connected");
-        new ReadThreadServer(clientMap,socketWrapper);
+        new ReadThreadServer(clientMap,socketWrapper,clientName);
     }
 }

@@ -10,6 +10,7 @@ class OuterStaticInner2 {
     // this is a static nested class
     static class Inner {
         int inner_x = 100;
+        static int static_x;
 
         Inner() {
             System.out.println("Inner Constuctor");
@@ -17,7 +18,7 @@ class OuterStaticInner2 {
 
         void print() {
             //System.out.println(outer_x);
-            System.out.println(static_x);
+            System.out.println(OuterStaticInner2.static_x);
             System.out.println(inner_x);
         }
     }

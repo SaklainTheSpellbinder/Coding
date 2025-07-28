@@ -7,7 +7,7 @@ public class ArrayListDemo1 {
 
     public static void main(String args[]) {
         // create an array list
-        List<String> al = new ArrayList<>();
+        List<String> al = new ArrayList<>();//non synchronized eta.....stringbuilder er moto
         System.out.println("Initial size of al: " + al.size());
 
         // add elements to the array list
@@ -30,9 +30,16 @@ public class ArrayListDemo1 {
 
         // Remove elements from the array list
         al.remove("F");
-        al.remove(2);
+        al.remove(2);//remove korte parle okay...na korte parle no error....jeta remove kore oita return koore idolo
 
         System.out.println("Size of al after deletions: " + al.size());
         System.out.println("Contents of al: " + al);
+
+        al.forEach(e -> System.out.println(e));
+
+        List al2=new ArrayList();//type safe na but ja iccha rakha jay rki...but use korte hole to typecast kore newa lagbe
+        al2.add("A");
+        al2.add(3);
+        al2.add(new Thread());
     }
 }

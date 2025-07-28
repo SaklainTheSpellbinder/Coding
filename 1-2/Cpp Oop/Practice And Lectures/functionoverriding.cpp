@@ -4,7 +4,7 @@ using namespace std;
 
 class Parent{
     public:
-        void show(){
+        virtual void show(){
             cout<<"parent class show..\n";
         }
         virtual void hello(){//enables runtime polymorphism

@@ -1,5 +1,5 @@
 public class VarArgsTest {
-    void vaTest(int ... v){
+    static void vaTest(int ... v){
         System.out.println("Int");
         for(int  x: v) {
             System.out.print(x + " ");
@@ -7,7 +7,7 @@ public class VarArgsTest {
         System.out.println();
     }
 
-    void vaTest(double ... v){
+    static void vaTest(double ... v){
         System.out.println("Int");
         for(double  x: v) {
             System.out.print(x + " ");
@@ -15,13 +15,13 @@ public class VarArgsTest {
         System.out.println();
     }
 
-    static void vaTest(boolean ... v){
-        System.out.println("Boolean");
-        for(boolean x: v) {
-            System.out.print(x + " ");
-        }
-        System.out.println();
-    }
+//    static void vaTest(boolean ... v){
+//        System.out.println("Boolean");
+//        for(boolean x: v) {
+//            System.out.print(x + " ");
+//        }
+//        System.out.println();
+//    }
 
     static void vaTest(String msg, int ... v){
         System.out.println("String, Int");
@@ -54,9 +54,9 @@ public class VarArgsTest {
     public static void main(String[] args) {
         vaTest("Testing", 10, 20);
         vaTest("Hehe",true,false);
-        vaTest(true, false, false);
+        //vaTest(true, false, false);
         VarArgsTest st=new VarArgsTest();
-        //vaTest(); // ambiguity type 1
+        vaTest(); // ambiguity type 1
         st.vaTest(1, 2, 3); // ambiguity type 2 with vaTest(int n, int ... v) and vaTest(int ... v)
     }
 }

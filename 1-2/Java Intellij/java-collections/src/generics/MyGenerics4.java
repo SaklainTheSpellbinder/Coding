@@ -11,7 +11,7 @@ class GenCons {
         System.out.println("val: " + val);
     }
 
-    public static <V> boolean isIn(V x, V[] a) {
+    public static <T extends Comparable<T>,V extends T> boolean isIn(T x, V[] a) {
         for (V t : a) {
             if (t == x) return true;
         }
@@ -28,12 +28,12 @@ class GenCons {
 
 public class MyGenerics4 {
     public static void main(String args[]) {
-        GenCons test = new <Integer>GenCons(100);
+        GenCons test = new <Integer>GenCons(100);//bracket er bhitor na likheo no pera
         GenCons test2 = new GenCons(123.5d);
         test.showVal();
         test2.showVal();
         Integer [] iArray = {1, 2, 3, 4, 5};
-        System.out.println(GenCons.<Integer>isIn(1, iArray));
+        System.out.println(GenCons.isIn(1, iArray));
         System.out.println(test.<Integer>isIn2(1, iArray));
     }
 }

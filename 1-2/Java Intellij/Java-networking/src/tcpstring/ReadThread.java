@@ -3,6 +3,7 @@ package tcpstring;
 import util.SocketWrapper;
 
 import java.io.IOException;
+import java.net.SocketException;
 
 public class ReadThread implements Runnable {
     private Thread thr;
@@ -20,7 +21,10 @@ public class ReadThread implements Runnable {
                 String s = (String) socketWrapper.read();
                 System.out.println(s);
             }
-        } catch (Exception e) {
+        }catch(SocketException e){
+            System.out.println("Disconnected");
+        }
+        catch (Exception e) {
             System.out.println(e);
         } finally {
             try {

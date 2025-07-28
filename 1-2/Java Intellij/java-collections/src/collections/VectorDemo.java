@@ -3,7 +3,8 @@ package collections;
 import java.util.Vector;
 
 class VectorDemo {
-
+//arrarlist 50% size increase kore.....r vector 100% size increase kore
+    //vector e add kora synchronized
     public static void main(String args[]) {
         Vector<Integer> v = new Vector<>();
         System.out.println("Initial size: " + v.size());

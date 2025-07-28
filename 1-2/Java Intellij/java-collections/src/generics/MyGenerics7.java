@@ -36,8 +36,8 @@ class Coords<T extends TwoD> {
 }
 
 class BoundedWildcard {
-    static void showXY(Coords<?> c) {
-        for (int i = 0; i< c.coords.length; i++) {
+    static void showXY(Coords<?> c) {//eta use korar karone jodi ami line 30 te T extends TwoD na diy....tahole x and y ke resolve korte parbe na and error dibe compile time e
+        for (int i = 0; i< c.coords.length; i++) {//ekhan theke z and t access kora jabe na karon ora to twoD er ongsho na....erpor ashche.....but ? to min twoD r jonno kaj korche ekhane
             System.out.println(c.coords[i].x + ", " + c.coords[i].y);
         }
         System.out.println();

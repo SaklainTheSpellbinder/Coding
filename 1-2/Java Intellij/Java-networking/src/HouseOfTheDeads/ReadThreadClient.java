@@ -14,16 +14,26 @@ public class ReadThreadClient implements Runnable {
     }
 
     public void run() {
-        while(true){
-            String s;
+        try{
+            while(true){
+                String s;
+                try {
+                    s=(String) socketWrapper.read();
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                } catch (ClassNotFoundException e) {
+                    throw new RuntimeException(e);
+                }
+                System.out.println(s);
+            }
+        }
+        finally{
             try {
-                s=(String) socketWrapper.read();
+                socketWrapper.closeConnection();
             } catch (IOException e) {
                 throw new RuntimeException(e);
-            } catch (ClassNotFoundException e) {
-                throw new RuntimeException(e);
             }
-            System.out.println(s);
         }
+
     }
 }

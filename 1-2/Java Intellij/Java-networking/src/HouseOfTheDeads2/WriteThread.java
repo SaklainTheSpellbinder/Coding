@@ -1,4 +1,4 @@
-package HouseOfTheDeads;
+package HouseOfTheDeads2;
 
 import util.SocketWrapper;
 

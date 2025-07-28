@@ -9,11 +9,12 @@ class Outer1 {
         Inner inner = new Inner();
         System.out.println(inner.inner_x);
         inner.display();
+
     }
 
     // this is an inner class
     class Inner {
-        int inner_x = 200;
+        private int inner_x = 200;
 
         Inner() {
             System.out.println("Inner Constructor");

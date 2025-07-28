@@ -31,6 +31,7 @@ public class SocketWrapper {
     }
 
     public void closeConnection() throws IOException {
+        socket.close();
         ois.close();
         oos.close();
     }

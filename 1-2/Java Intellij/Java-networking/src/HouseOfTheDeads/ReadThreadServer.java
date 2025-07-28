@@ -39,6 +39,9 @@ public class ReadThreadServer implements Runnable {
                     }
                 }
             }
+
+            //clientMap.forEach((key,value)-> System.out.println(key+" "+value));
+
         }
     }
 }

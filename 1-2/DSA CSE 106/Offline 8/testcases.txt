@@ -1,0 +1,1700 @@
+=== Test Case 1 ===
+Input:
+ACAAGGCCCTG
+TCCAGCTAAT
+2
+-3
+-5
+Global Alignment:
+ACAAGGCCCTG
+TCCA-GCTAAT
+Maximum Score: -15
+
+Local Alignment:
+CA
+CA
+Maximum Score: 4
+
+=== Test Case 2 ===
+Input:
+AATTGTA
+ACTGGTATA
+1
+-1
+-5
+Global Alignment:
+AAT--TGTA
+ACTGGTATA
+Maximum Score: -7
+
+Local Alignment:
+GTA
+GTA
+Maximum Score: 3
+
+=== Test Case 3 ===
+Input:
+GAGTGTAGCTTA
+TAATTTTC
+2
+-2
+-3
+Global Alignment:
+GAGTGTAGCTTA
+TAAT-T---TTC
+Maximum Score: -8
+
+Local Alignment:
+TA
+TA
+Maximum Score: 4
+
+=== Test Case 4 ===
+Input:
+ACGATGC
+AATTCTACAG
+1
+-2
+-4
+Global Alignment:
+-A--CGATGC
+AATTCTACAG
+Maximum Score: -17
+
+Local Alignment:
+AC
+AC
+Maximum Score: 2
+
+=== Test Case 5 ===
+Input:
+TATTTAGACACT
+GCATTG
+3
+-5
+-3
+Global Alignment:
+-TATTTAGACACT
+GCA-TT-G-----
+Maximum Score: -17
+
+Local Alignment:
+ATT
+ATT
+Maximum Score: 9
+
+=== Test Case 6 ===
+Input:
+AGCGAAGGAA
+TGGTAGC
+2
+-1
+-2
+Global Alignment:
+AGCGAAGGAA
+TG-GTA-G-C
+Maximum Score: -1
+
+Local Alignment:
+AGC
+AGC
+Maximum Score: 6
+
+=== Test Case 7 ===
+Input:
+CTAGTCACTCC
+CCCTGA
+2
+-1
+-2
+Global Alignment:
+CTAGTCACTCC
+C----C-CTGA
+Maximum Score: -4
+
+Local Alignment:
+CACT
+CCCT
+Maximum Score: 5
+
+=== Test Case 8 ===
+Input:
+TAAGTTATAA
+CCGCAACTGAGG
+2
+-5
+-4
+Global Alignment:
+---TAAGTTATAA
+CCGCAACTGA-GG
+Maximum Score: -33
+
+Local Alignment:
+AA
+AA
+Maximum Score: 4
+
+=== Test Case 9 ===
+Input:
+ACTCATTA
+ATGTGA
+3
+-1
+-1
+Global Alignment:
+ACTCATTA
+A-T-GTGA
+Maximum Score: 8
+
+Local Alignment:
+AT-T-A
+ATGTGA
+Maximum Score: 10
+
+=== Test Case 10 ===
+Input:
+GTCTTCAGCT
+CGTGCAGA
+1
+-3
+-1
+Global Alignment:
+-GT-CTTCAG-CT
+CGTG---CAGA--
+Maximum Score: -3
+
+Local Alignment:
+CAG
+CAG
+Maximum Score: 3
+
+=== Test Case 11 ===
+Input:
+CACCGCCCCGC
+TATGAGTT
+2
+-1
+-3
+Global Alignment:
+CACCGCCCCGC
+TA-TG--AGTT
+Maximum Score: -11
+
+Local Alignment:
+A
+A
+Maximum Score: 2
+
+=== Test Case 12 ===
+Input:
+CTTGAGC
+GGGAAG
+3
+-1
+-1
+Global Alignment:
+CTTG-AGC
+-GGGAAG-
+Maximum Score: 4
+
+Local Alignment:
+G-AG
+GAAG
+Maximum Score: 8
+
+=== Test Case 13 ===
+Input:
+TCCTCTGCT
+CCGAGGGCT
+2
+-3
+-4
+Global Alignment:
+TCCTCTGCT
+CCGAGGGCT
+Maximum Score: -7
+
+Local Alignment:
+GCT
+GCT
+Maximum Score: 6
+
+=== Test Case 14 ===
+Input:
+AAACGCCACCAG
+ATATTGAATCC
+1
+-3
+-3
+Global Alignment:
+A-AACGCCA-CCAG
+ATATTG-AATCC--
+Maximum Score: -18
+
+Local Alignment:
+AA
+AA
+Maximum Score: 2
+
+=== Test Case 15 ===
+Input:
+CCCTGGA
+CCGGGATAAC
+3
+-2
+-4
+Global Alignment:
+CCCTG--GA-
+CCGGGATAAC
+Maximum Score: -6
+
+Local Alignment:
+CCTGGA
+CCGGGA
+Maximum Score: 13
+
+=== Test Case 16 ===
+Input:
+ACCTTGGTTGGA
+TAGCATGAGTTG
+1
+-3
+-5
+Global Alignment:
+-ACCTTG-GTTGGA
+TAGCATGAGTT-G-
+Maximum Score: -18
+
+Local Alignment:
+GTTG
+GTTG
+Maximum Score: 4
+
+=== Test Case 17 ===
+Input:
+AGCACAGTAA
+CTACCC
+2
+-3
+-1
+Global Alignment:
+--A-GCACAGTAA
+CTAC-C-C-----
+Maximum Score: -4
+
+Local Alignment:
+C-AC
+CTAC
+Maximum Score: 5
+
+=== Test Case 18 ===
+Input:
+TGCCGTTCCCG
+TTCGACAGT
+2
+-5
+-4
+Global Alignment:
+TGCCGTTCCCG-
+T-TCG--ACAGT
+Maximum Score: -21
+
+Local Alignment:
+TTC
+TTC
+Maximum Score: 6
+
+=== Test Case 19 ===
+Input:
+CTTGTGTA
+TATGCGCCG
+2
+-5
+-2
+Global Alignment:
+CT-T--G--TGTA
+-TATGCGCC-G--
+Maximum Score: -10
+
+Local Alignment:
+TG
+TG
+Maximum Score: 4
+
+=== Test Case 20 ===
+Input:
+CCAGCTTGC
+TAATTGT
+3
+-4
+-4
+Global Alignment:
+CCAGCTTGC
+-TA-ATTGT
+Maximum Score: -8
+
+Local Alignment:
+TTG
+TTG
+Maximum Score: 9
+
+=== Test Case 21 ===
+Input:
+GATGCTA
+CAGGTCCAACC
+3
+-1
+-4
+Global Alignment:
+--GATGCTA--
+CAGGTCCAACC
+Maximum Score: -7
+
+Local Alignment:
+GATGCTA
+GGTCCAA
+Maximum Score: 9
+
+=== Test Case 22 ===
+Input:
+AGGGATACCCGG
+CCATCA
+2
+-2
+-2
+Global Alignment:
+AGGGATACCCGG
+--CCAT---C-A
+Maximum Score: -12
+
+Local Alignment:
+AT
+AT
+Maximum Score: 4
+
+=== Test Case 23 ===
+Input:
+CGATACG
+ACACCA
+1
+-4
+-1
+Global Alignment:
+-CGA--TACG
+AC-ACC-A--
+Maximum Score: -4
+
+Local Alignment:
+AC
+AC
+Maximum Score: 2
+
+=== Test Case 24 ===
+Input:
+ATCGGCCAAA
+CAGGGTGCC
+3
+-4
+-2
+Global Alignment:
+-A---TCGGCCAAA
+CAGGGT--GCC---
+Maximum Score: -3
+
+Local Alignment:
+G-GCC
+GTGCC
+Maximum Score: 10
+
+=== Test Case 25 ===
+Input:
+GGATATCC
+GTGTGCGGGG
+3
+-4
+-4
+Global Alignment:
+G-GATATC---C
+GTG-T-GCGGGG
+Maximum Score: -20
+
+Local Alignment:
+GG
+GG
+Maximum Score: 6
+
+=== Test Case 26 ===
+Input:
+TTGGCCCG
+GCGTTTT
+1
+-5
+-5
+Global Alignment:
+TTG-GCCCG
+--GCGTTTT
+Maximum Score: -33
+
+Local Alignment:
+TT
+TT
+Maximum Score: 2
+
+=== Test Case 27 ===
+Input:
+CACAATTGGG
+ACCTCGCTTCG
+2
+-3
+-2
+Global Alignment:
+--CACAATTGGG
+ACCTCGCTT-CG
+Maximum Score: -8
+
+Local Alignment:
+AC
+AC
+Maximum Score: 4
+
+=== Test Case 28 ===
+Input:
+TTGGGAATTTC
+CCGGGCTCT
+1
+-3
+-1
+Global Alignment:
+--TTGGG-AAT-TTC
+CC--GGGC--TC-T-
+Maximum Score: -5
+
+Local Alignment:
+GGG
+GGG
+Maximum Score: 3
+
+=== Test Case 29 ===
+Input:
+CGCCGCG
+ATAGTAATAAA
+1
+-1
+-5
+Global Alignment:
+--CG--CCGCG
+ATAGTAATAAA
+Maximum Score: -25
+
+Local Alignment:
+G
+G
+Maximum Score: 1
+
+=== Test Case 30 ===
+Input:
+AGAACGGCTTGT
+AGCCCGAACCGG
+1
+-3
+-3
+Global Alignment:
+AGAACG-GCTTGT
+AGCCCGAAC-CGG
+Maximum Score: -15
+
+Local Alignment:
+GAAC
+GAAC
+Maximum Score: 4
+
+=== Test Case 31 ===
+Input:
+GAGGAG
+GGCACAG
+2
+-5
+-2
+Global Alignment:
+-G-A-GGAG
+GGCAC--AG
+Maximum Score: -2
+
+Local Alignment:
+AG
+AG
+Maximum Score: 4
+
+=== Test Case 32 ===
+Input:
+CAGGAGCA
+CTTAGAAC
+2
+-4
+-2
+Global Alignment:
+C--AGGAGCA
+CTTA-GAAC-
+Maximum Score: -2
+
+Local Alignment:
+AG
+AG
+Maximum Score: 4
+
+=== Test Case 33 ===
+Input:
+ACAGGGTAA
+TGGGCTCATGA
+1
+-1
+-3
+Global Alignment:
+ACAG--GGTAA
+TGGGCTCATGA
+Maximum Score: -9
+
+Local Alignment:
+GGG
+GGG
+Maximum Score: 3
+
+=== Test Case 34 ===
+Input:
+CCCCAG
+TGGGGCGCGCTG
+3
+-1
+-2
+Global Alignment:
+-----C-CCCAG
+TGGGGCGCGCTG
+Maximum Score: -2
+
+Local Alignment:
+C-CCCAG
+CGCGCTG
+Maximum Score: 8
+
+=== Test Case 35 ===
+Input:
+GTACAGGGGATC
+CAGAGCGG
+1
+-2
+-4
+Global Alignment:
+GTACAGGGGATC
+-CAGAGCGG---
+Maximum Score: -17
+
+Local Alignment:
+CAG
+CAG
+Maximum Score: 3
+
+=== Test Case 36 ===
+Input:
+GTTCGATGCC
+TCCTATATA
+1
+-2
+-5
+Global Alignment:
+GTTCGATGCC
+-TCCTATATA
+Maximum Score: -11
+
+Local Alignment:
+TC
+TC
+Maximum Score: 2
+
+=== Test Case 37 ===
+Input:
+GGGGGATCT
+ACATTGACTCTC
+1
+-5
+-4
+Global Alignment:
+-GGGGGA-TCT-
+ACATTGACTCTC
+Maximum Score: -27
+
+Local Alignment:
+TCT
+TCT
+Maximum Score: 3
+
+=== Test Case 38 ===
+Input:
+GCCCTT
+CTACCGTCG
+3
+-4
+-1
+Global Alignment:
+GC--CC-T--T
+-CTACCGTCG-
+Maximum Score: 5
+
+Local Alignment:
+C--CC-T
+CTACCGT
+Maximum Score: 9
+
+=== Test Case 39 ===
+Input:
+ACCACA
+GCCAAAGGTT
+3
+-4
+-4
+Global Alignment:
+ACCACA----
+GCCAAAGGTT
+Maximum Score: -12
+
+Local Alignment:
+CCA
+CCA
+Maximum Score: 9
+
+=== Test Case 40 ===
+Input:
+CCAAAGAGAT
+ATACTC
+1
+-5
+-5
+Global Alignment:
+CCAAAGAGAT-
+----ATA-CTC
+Maximum Score: -37
+
+Local Alignment:
+AT
+AT
+Maximum Score: 2
+
+=== Test Case 41 ===
+Input:
+TGGCAGC
+GGGACAATAC
+1
+-2
+-2
+Global Alignment:
+TGG-C-A-GC
+GGGACAATAC
+Maximum Score: -5
+
+Local Alignment:
+GG
+GG
+Maximum Score: 2
+
+=== Test Case 42 ===
+Input:
+GAATACACAA
+ACCAAAG
+3
+-3
+-1
+Global Alignment:
+GA-ATACACAA-
+-AC---CA-AAG
+Maximum Score: 8
+
+Local Alignment:
+ACACAA
+AC-CAA
+Maximum Score: 14
+
+=== Test Case 43 ===
+Input:
+ACTCCGGTTAG
+CAGCGTCGAGT
+1
+-4
+-1
+Global Alignment:
+-A-C-TCCG-GTTAG
+CAGCGT-CGAG-T--
+Maximum Score: -1
+
+Local Alignment:
+CG-GT
+CGAGT
+Maximum Score: 3
+
+=== Test Case 44 ===
+Input:
+GATGTAG
+GTGGGA
+2
+-1
+-1
+Global Alignment:
+GAT-GTAG
+G-TGGGA-
+Maximum Score: 4
+
+Local Alignment:
+GATG
+G-TG
+Maximum Score: 5
+
+=== Test Case 45 ===
+Input:
+TCTTCCGGGCCC
+GATTTAAA
+2
+-2
+-5
+Global Alignment:
+TCTTCCGGGCCC
+GATT----TAAA
+Maximum Score: -28
+
+Local Alignment:
+TT
+TT
+Maximum Score: 4
+
+=== Test Case 46 ===
+Input:
+GAGGTTA
+TAAATACTTAG
+1
+-2
+-3
+Global Alignment:
+--GA-GGTTA-
+TAAATACTTAG
+Maximum Score: -14
+
+Local Alignment:
+TTA
+TTA
+Maximum Score: 3
+
+=== Test Case 47 ===
+Input:
+AGTGACGA
+GCTTTGGCTC
+1
+-5
+-5
+Global Alignment:
+AG---TGACGA
+-GCTTTGGCTC
+Maximum Score: -31
+
+Local Alignment:
+TG
+TG
+Maximum Score: 2
+
+=== Test Case 48 ===
+Input:
+AAGATCG
+ATCCTCCC
+2
+-5
+-3
+Global Alignment:
+AAGAT-CG
+ATCCTCCC
+Maximum Score: -17
+
+Local Alignment:
+ATC
+ATC
+Maximum Score: 6
+
+=== Test Case 49 ===
+Input:
+TGCGTTTG
+CGGTTTGCCC
+3
+-2
+-3
+Global Alignment:
+TGCGTTTG---
+CG-GTTTGCCC
+Maximum Score: 4
+
+Local Alignment:
+GTTTG
+GTTTG
+Maximum Score: 15
+
+=== Test Case 50 ===
+Input:
+CGCTACGC
+GAATGACGTAG
+2
+-4
+-2
+Global Alignment:
+CG-CT-ACG--C
+-GAATGACGTAG
+Maximum Score: -8
+
+Local Alignment:
+CGCTA
+CG-TA
+Maximum Score: 6
+
+=== Test Case 51 ===
+Input:
+TTGCCG
+TTATGC
+2
+-4
+-3
+Global Alignment:
+-T-TGCCG
+TTATG-C-
+Maximum Score: -4
+
+Local Alignment:
+TGC
+TGC
+Maximum Score: 6
+
+=== Test Case 52 ===
+Input:
+ATGTCCAGACCC
+AGGCTTGC
+2
+-3
+-3
+Global Alignment:
+ATGTCCAGACCC
+A-GGCTTG---C
+Maximum Score: -11
+
+Local Alignment:
+TG
+TG
+Maximum Score: 4
+
+=== Test Case 53 ===
+Input:
+CCGTGATGAACC
+AGGAACTCAGTA
+3
+-4
+-1
+Global Alignment:
+-CCGTG-A-T--G-AACC
+A--G-GAACTCAGT-A--
+Maximum Score: 6
+
+Local Alignment:
+GATGAAC-C
+G--GAACTC
+Maximum Score: 15
+
+=== Test Case 54 ===
+Input:
+TTTTAG
+ATAGCCAAC
+3
+-2
+-1
+Global Alignment:
+TTTTAG-----
+--ATAGCCAAC
+Maximum Score: 0
+
+Local Alignment:
+TAG
+TAG
+Maximum Score: 9
+
+=== Test Case 55 ===
+Input:
+TGGAGGTACA
+TGCCCGGTGA
+3
+-2
+-5
+Global Alignment:
+TG-GAGGTACA
+TGCCCGGT-GA
+Maximum Score: 2
+
+Local Alignment:
+GGT
+GGT
+Maximum Score: 9
+
+=== Test Case 56 ===
+Input:
+TACACAAA
+TACATTGGTGGC
+1
+-3
+-3
+Global Alignment:
+TACA----CAAA
+TACATTGGTGGC
+Maximum Score: -20
+
+Local Alignment:
+TACA
+TACA
+Maximum Score: 4
+
+=== Test Case 57 ===
+Input:
+ATTCTGATCT
+GTCCGGGA
+1
+-2
+-5
+Global Alignment:
+ATTCTGATCT
+-GTCCG-GGA
+Maximum Score: -17
+
+Local Alignment:
+TC
+TC
+Maximum Score: 2
+
+=== Test Case 58 ===
+Input:
+CGGAGGG
+TCGAGGCC
+3
+-4
+-5
+Global Alignment:
+-CGGAGG-G
+TC-GAGGCC
+Maximum Score: -4
+
+Local Alignment:
+GAGG
+GAGG
+Maximum Score: 12
+
+=== Test Case 59 ===
+Input:
+GTGTCCCA
+GTGACGGGGTTG
+3
+-1
+-5
+Global Alignment:
+GTGTC----CCA
+GTGACGGGGTTG
+Maximum Score: -12
+
+Local Alignment:
+GTGTC
+GTGAC
+Maximum Score: 11
+
+=== Test Case 60 ===
+Input:
+GGAAGTCCA
+GACCGGCCCT
+2
+-4
+-2
+Global Alignment:
+GGA--AGTCCA
+-GACCGGCCCT
+Maximum Score: -8
+
+Local Alignment:
+GG
+GG
+Maximum Score: 4
+
+=== Test Case 61 ===
+Input:
+AATCGAGATAA
+GGAGGCGGCCTA
+1
+-2
+-2
+Global Alignment:
+--AATCGAG-ATAA
+GGAGGCG-GCCT-A
+Maximum Score: -10
+
+Local Alignment:
+GAG
+GAG
+Maximum Score: 3
+
+=== Test Case 62 ===
+Input:
+AGCCCCTGCGAG
+GCCATTCT
+3
+-5
+-2
+Global Alignment:
+AGCC---CCTGCGAG
+-GCCATT-CT-----
+Maximum Score: -5
+
+Local Alignment:
+GCC
+GCC
+Maximum Score: 9
+
+=== Test Case 63 ===
+Input:
+GTGGGCC
+CATCTGGCCC
+3
+-3
+-1
+Global Alignment:
+----GTGG-GCC
+CATC-TGGC-CC
+Maximum Score: 8
+
+Local Alignment:
+TGGGCC
+T-GGCC
+Maximum Score: 14
+
+=== Test Case 64 ===
+Input:
+CCACGAGT
+CGCCTTTCTA
+3
+-2
+-3
+Global Alignment:
+C-CAC-GAGT-
+CGC-CTTTCTA
+Maximum Score: -6
+
+Local Alignment:
+CC
+CC
+Maximum Score: 6
+
+=== Test Case 65 ===
+Input:
+CCACGCTC
+ACCACGAA
+3
+-1
+-1
+Global Alignment:
+-CCACGCTC
+ACCACG-AA
+Maximum Score: 11
+
+Local Alignment:
+CCACG
+CCACG
+Maximum Score: 15
+
+=== Test Case 66 ===
+Input:
+AGGTCTG
+TTTGCC
+2
+-3
+-2
+Global Alignment:
+AGGTCTG--
+---TTTGCC
+Maximum Score: -7
+
+Local Alignment:
+TG
+TG
+Maximum Score: 4
+
+=== Test Case 67 ===
+Input:
+ATTCCGACT
+CAACCTCTC
+2
+-4
+-4
+Global Alignment:
+-ATTCCGACT-
+CA-ACC-TCTC
+Maximum Score: -14
+
+Local Alignment:
+TC
+TC
+Maximum Score: 4
+
+=== Test Case 68 ===
+Input:
+GAGCCCT
+CCACCTCT
+1
+-3
+-2
+Global Alignment:
+-GAGCC-CT
+CCA-CCTCT
+Maximum Score: -4
+
+Local Alignment:
+CCT
+CCT
+Maximum Score: 3
+
+=== Test Case 69 ===
+Input:
+AGGTATTT
+GCCAAA
+1
+-2
+-2
+Global Alignment:
+AGGTATTT
+-GCCA-AA
+Maximum Score: -10
+
+Local Alignment:
+A
+A
+Maximum Score: 1
+
+=== Test Case 70 ===
+Input:
+ACTCACCG
+CATAAGCAATA
+3
+-2
+-5
+Global Alignment:
+---ACTCACCG
+CATAAGCAATA
+Maximum Score: -16
+
+Local Alignment:
+CA
+CA
+Maximum Score: 6
+
+=== Test Case 71 ===
+Input:
+CTCCATG
+TCTTCT
+2
+-1
+-1
+Global Alignment:
+-CTCCATG
+TCTTC-T-
+Maximum Score: 4
+
+Local Alignment:
+CTCCAT
+CTTC-T
+Maximum Score: 6
+
+=== Test Case 72 ===
+Input:
+ATTTTT
+AGGGCCTT
+3
+-1
+-2
+Global Alignment:
+A--TTTTT
+AGGGCCTT
+Maximum Score: 2
+
+Local Alignment:
+TT
+TT
+Maximum Score: 6
+
+=== Test Case 73 ===
+Input:
+ATGTACTTT
+CGCATAACCG
+1
+-2
+-5
+Global Alignment:
+-ATGTACTTT
+CGCATAACCG
+Maximum Score: -17
+
+Local Alignment:
+AT
+AT
+Maximum Score: 2
+
+=== Test Case 74 ===
+Input:
+AGGGGCC
+TTAACTTAA
+2
+-2
+-5
+Global Alignment:
+--AGGGGCC
+TTAACTTAA
+Maximum Score: -20
+
+Local Alignment:
+A
+A
+Maximum Score: 2
+
+=== Test Case 75 ===
+Input:
+TCAGCGCATTTG
+TCTGTGATAG
+2
+-3
+-5
+Global Alignment:
+TCAGCGCATTTG
+TCTGTG-A-TAG
+Maximum Score: -5
+
+Local Alignment:
+TC
+TC
+Maximum Score: 4
+
+=== Test Case 76 ===
+Input:
+GGAAGGGACG
+CTTGTATG
+1
+-3
+-3
+Global Alignment:
+GGAAGGGACG
+--CTTGTATG
+Maximum Score: -18
+
+Local Alignment:
+G
+G
+Maximum Score: 1
+
+=== Test Case 77 ===
+Input:
+CAGAGGC
+GTACGG
+1
+-2
+-2
+Global Alignment:
+CAG-A-GGC
+--GTACGG-
+Maximum Score: -6
+
+Local Alignment:
+GG
+GG
+Maximum Score: 2
+
+=== Test Case 78 ===
+Input:
+CAATTTCGCA
+GAAATTCCG
+1
+-4
+-4
+Global Alignment:
+CAATTTCGCA
+GAAATTC-CG
+Maximum Score: -10
+
+Local Alignment:
+AATT
+AATT
+Maximum Score: 4
+
+=== Test Case 79 ===
+Input:
+GTTGAAGTCG
+CTACGATT
+2
+-1
+-5
+Global Alignment:
+GTTGAAGTCG
+-CT-ACGATT
+Maximum Score: -9
+
+Local Alignment:
+TT
+TT
+Maximum Score: 4
+
+=== Test Case 80 ===
+Input:
+GGTGGGGAA
+AGAGTCAGTCCA
+3
+-1
+-3
+Global Alignment:
+-G-GT-GGGGAA
+AGAGTCAGTCCA
+Maximum Score: 2
+
+Local Alignment:
+GTGGG
+GTCAG
+Maximum Score: 7
+
+=== Test Case 81 ===
+Input:
+GTGGGTTG
+CCGTCC
+1
+-2
+-2
+Global Alignment:
+GTGGGTTG
+--CCGTCC
+Maximum Score: -10
+
+Local Alignment:
+GT
+GT
+Maximum Score: 2
+
+=== Test Case 82 ===
+Input:
+GGCAGT
+TACTGCGAT
+1
+-3
+-2
+Global Alignment:
+---GGC-AGT
+TACTGCGA-T
+Maximum Score: -9
+
+Local Alignment:
+GC
+GC
+Maximum Score: 2
+
+=== Test Case 83 ===
+Input:
+GCAAAACAG
+AATCCC
+2
+-2
+-5
+Global Alignment:
+GCAAAACAG
+---AATCCC
+Maximum Score: -15
+
+Local Alignment:
+AA
+AA
+Maximum Score: 4
+
+=== Test Case 84 ===
+Input:
+GGCGGCTA
+AAAATGTGCTTA
+1
+-3
+-5
+Global Alignment:
+--GGCG-GC-TA
+AAAATGTGCTTA
+Maximum Score: -24
+
+Local Alignment:
+GCT
+GCT
+Maximum Score: 3
+
+=== Test Case 85 ===
+Input:
+GGCATA
+CCCAATGT
+2
+-2
+-3
+Global Alignment:
+GGC-AT-A
+CCCAATGT
+Maximum Score: -6
+
+Local Alignment:
+CA
+CA
+Maximum Score: 4
+
+=== Test Case 86 ===
+Input:
+CATTGGCTACTA
+GAAACGAG
+1
+-2
+-2
+Global Alignment:
+CATTGGCTACTA-
+-----GAAACGAG
+Maximum Score: -14
+
+Local Alignment:
+AC
+AC
+Maximum Score: 2
+
+=== Test Case 87 ===
+Input:
+TTTCATGCTCC
+TACCTACCTAG
+3
+-4
+-1
+Global Alignment:
+T-TTCATGCT-CC---
+TA--C---CTACCTAG
+Maximum Score: 8
+
+Local Alignment:
+T-CATGCT-CC
+TAC---CTACC
+Maximum Score: 13
+
+=== Test Case 88 ===
+Input:
+CACCACG
+GGGAACCAACA
+3
+-4
+-4
+Global Alignment:
+---CACC-ACG
+GGGAACCAACA
+Maximum Score: -9
+
+Local Alignment:
+ACCA
+ACCA
+Maximum Score: 12
+
+=== Test Case 89 ===
+Input:
+TGCCGC
+TCCAACCTA
+1
+-3
+-5
+Global Alignment:
+T---GCCGC
+TCCAACCTA
+Maximum Score: -21
+
+Local Alignment:
+CC
+CC
+Maximum Score: 2
+
+=== Test Case 90 ===
+Input:
+TCGTCTAGC
+GATAATCCT
+1
+-5
+-4
+Global Alignment:
+--TCGT-CTAGC
+GATAATCCT---
+Maximum Score: -30
+
+Local Alignment:
+TC
+TC
+Maximum Score: 2
+
+=== Test Case 91 ===
+Input:
+ACTACGTCGCT
+ACACTAGACACT
+2
+-1
+-2
+Global Alignment:
+--ACTACGTCGCT
+ACACTA-GACACT
+Maximum Score: 8
+
+Local Alignment:
+ACTACGTCGCT
+ACTA-GACACT
+Maximum Score: 12
+
+=== Test Case 92 ===
+Input:
+AATTTGTAC
+GACGTT
+1
+-1
+-5
+Global Alignment:
+AATTTGTAC
+GA--CGT-T
+Maximum Score: -15
+
+Local Alignment:
+TT
+TT
+Maximum Score: 2
+
+=== Test Case 93 ===
+Input:
+ACAACT
+GGGAAG
+3
+-5
+-3
+Global Alignment:
+-ACAACT
+GGGAA-G
+Maximum Score: -15
+
+Local Alignment:
+AA
+AA
+Maximum Score: 6
+
+=== Test Case 94 ===
+Input:
+CCTACCTAA
+GTGTCCTG
+2
+-5
+-5
+Global Alignment:
+CCT-ACCTAA
+-GTGTCCT-G
+Maximum Score: -22
+
+Local Alignment:
+CCT
+CCT
+Maximum Score: 6
+
+=== Test Case 95 ===
+Input:
+CAGCGGC
+GACAAAC
+3
+-2
+-5
+Global Alignment:
+CAGCGGC
+GACAAAC
+Maximum Score: -4
+
+Local Alignment:
+CA
+CA
+Maximum Score: 6
+
+=== Test Case 96 ===
+Input:
+GAGAGTCTCCC
+CGCCGTGCCA
+2
+-3
+-4
+Global Alignment:
+GAGAGTCTCCC
+CGCCGT-GCCA
+Maximum Score: -14
+
+Local Alignment:
+GT
+GT
+Maximum Score: 4
+
+=== Test Case 97 ===
+Input:
+AAGCCCCAATG
+CTAACT
+3
+-4
+-5
+Global Alignment:
+AAGCCCCAA-TG
+-----CTAACT-
+Maximum Score: -27
+
+Local Alignment:
+AA
+AA
+Maximum Score: 6
+
+=== Test Case 98 ===
+Input:
+TACGGGCT
+GTGGGTTTTAGG
+3
+-3
+-1
+Global Alignment:
+-TACGGG---CT---
+GT--GGGTTT-TAGG
+Maximum Score: 5
+
+Local Alignment:
+TACGGGCT
+T--GGG-T
+Maximum Score: 12
+
+=== Test Case 99 ===
+Input:
+GCTCGGA
+GTACTG
+1
+-5
+-2
+Global Alignment:
+G--CTCGGA
+GTACT--G-
+Maximum Score: -6
+
+Local Alignment:
+CT
+CT
+Maximum Score: 2
+
+=== Test Case 100 ===
+Input:
+ACGAAAGGCC
+ATGAACTAACAA
+3
+-4
+-4
+Global Alignment:
+ACGAA--AGGC-C
+ATGAACTA-ACAA
+Maximum Score: -10
+
+Local Alignment:
+GAA
+GAA
+Maximum Score: 9
+
