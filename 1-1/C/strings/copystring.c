@@ -7,6 +7,6 @@ int main(){
     //printf("%s",s2);
      char s2[]="Physics Wallah";
      s2[0]='m';
-     printf()
+     printf("");
     return 0; 
 }

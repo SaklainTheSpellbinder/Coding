@@ -1,8 +1,8 @@
 #include<stdio.h>
 void ConCatenate(char s1[],char s2[],char s3[]);
 int main(){
-    char s1[]="Hey RRA, ";
-    char s2[]="I Like You";
+    char s1[]="Hey tintin, ";
+    char s2[]="Do you know Saklain?";
     char s3[100];
     ConCatenate(s1,s2,s3);
     printf("%s",s3);
