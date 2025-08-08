@@ -1,5 +1,6 @@
+package Java
 
-public class SendEmailManual {    
+public class SendEmailManual {
     public static void main(String args[]) {
         EmailSender emailSender = new EmailSender();
         String emailText = "This is a sample email.";
