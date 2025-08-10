@@ -60,7 +60,15 @@ class ComparatorDemo {
         printList(al);
         Collections.sort(al);
         printList(al);
-        Collections.sort(al, new TestClassComparator());
+        Collections.sort(al, new TestClassComparator());//custom sort
+        printList(al);
+        Collections.sort(al,(o1,o2)->{//evabe just interface er method tar implementation lambda likhleo hobe...mainly comapre function ke lekha hoise
+            int temp=o2.getName().compareTo(o1.getName());
+            if(temp==0){
+                return o2.getId()-o1.getId();
+            }
+            return temp;
+        });
         printList(al);
     }
 }

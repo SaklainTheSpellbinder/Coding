@@ -8,19 +8,19 @@ class FileOutputStreamDemo {
                 + " to come to the aid of their country\n"
                 + " and pay their due taxes.";
         byte buf[] = source.getBytes();
-        OutputStream f0 = new FileOutputStream("files/file1.txt");
+        OutputStream f0 = new FileOutputStream("src/files/file1.txt");
 
         for (int i = 0; i < buf.length; i += 2) {
             f0.write(buf[i]);
         }
         f0.close();
 
-        OutputStream f1 = new FileOutputStream("files/file2.txt");
+        OutputStream f1 = new FileOutputStream("src/files/file2.txt");
         f1.write(buf);
         f1.close();
 
-        OutputStream f2 = new FileOutputStream("files/file3.txt");
-        f2.write(buf, buf.length - buf.length / 4, buf.length / 4);
+        OutputStream f2 = new FileOutputStream("src/files/file3.txt");
+        f2.write(buf, buf.length - buf.length / 4, buf.length / 4);//last 25% ke print kore just
         f2.close();
     }
 }

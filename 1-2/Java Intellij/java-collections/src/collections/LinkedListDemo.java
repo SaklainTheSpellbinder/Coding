@@ -15,7 +15,7 @@ class LinkedListDemo {
         ll.add("C");
         ll.addLast("generics.Z");
         ll.addFirst("A");
-
+        //ekhane abar addElement nam e kono method nai
         ll.add(1, "A2");
 
         System.out.println("Original contents of ll: " + ll);

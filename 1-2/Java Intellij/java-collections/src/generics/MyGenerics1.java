@@ -30,7 +30,7 @@ public class MyGenerics1<T> {
         System.out.println(myGenerics.getObj());
         MyGenerics1<String> myGenerics1 = new MyGenerics1<>();
         myGenerics1.setObj("Hello");
-        String str = myGenerics1.getObj();
+        String str = myGenerics1.getObj();//no casting needed.....classcastexception ke na boli
         System.out.println(str);
         MyGenerics1 noGenerics = new MyGenerics1(); // still possible
         noGenerics.setObj(20);
@@ -38,7 +38,7 @@ public class MyGenerics1<T> {
         noGenerics.setObj("World");
         System.out.println(noGenerics.getObj());
         MyGenerics1[] mygenrics1=new MyGenerics1[10];//emon raw array ee possible generics diye....type bole diye array possible na....
-        mygenrics1[0]=new MyGenerics1<Integer>(10);
+        mygenrics1[0]=new MyGenerics1(10);
         mygenrics1[1]=new MyGenerics1<String>("Saklain");//ekek index e ekek object possible
         mygenrics1[2]=new MyGenerics1<Thread>(new Thread());
         for(int i=0;i<3;i++){

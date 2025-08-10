@@ -5,7 +5,7 @@ import java.io.InputStream;
 class FileInputStreamDemo {
     public static void main(String args[]) throws Exception {
         int size;
-        InputStream f = new FileInputStream("files/TestFile.txt");
+        InputStream f = new FileInputStream("src/files/TestFile.txt");
         System.out.println("Total Available Bytes: " + (size = f.available()));
         int n = size / 40;
         System.out.println("First " + n + " bytes of the file one read() at a time");

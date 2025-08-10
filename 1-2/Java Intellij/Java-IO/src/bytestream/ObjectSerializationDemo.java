@@ -31,7 +31,7 @@ public class ObjectSerializationDemo {
             MyClass object2 = new MyClass("Hello2", 7, 1.7e10);
             System.out.println("object1: " + object1);
             System.out.println("object2: " + object2);
-            FileOutputStream fos = new FileOutputStream("files/serial");
+            FileOutputStream fos = new FileOutputStream("src/files/serial");
             ObjectOutputStream oos = new ObjectOutputStream(fos);
             oos.writeObject(object1);
             oos.writeObject(object2);
@@ -44,7 +44,7 @@ public class ObjectSerializationDemo {
         // Object serialization
         try {
             MyClass object1, object2;
-            FileInputStream fis = new FileInputStream("files/serial");
+            FileInputStream fis = new FileInputStream("src/files/serial");
             ObjectInputStream ois = new ObjectInputStream(fis);
             object1 = (MyClass) ois.readObject();
             System.out.println("object1: " + object1);

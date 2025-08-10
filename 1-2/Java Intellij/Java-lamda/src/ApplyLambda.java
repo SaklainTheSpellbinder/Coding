@@ -64,6 +64,6 @@ public class ApplyLambda {
 
         Collections.sort(al, Comparator.comparing(MyClass::getId).thenComparing(MyClass::getName));
         al.forEach(e -> System.out.println(e.getId() + ", " + e.getName()));
-        System.out.println();
+        System.out.println();  
     }
 }

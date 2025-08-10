@@ -1,14 +1,15 @@
 package collections;
 
 import java.util.HashMap;
+import java.util.concurrent.ConcurrentHashMap;
 
 class HashMapDemo {
     public static void main(String args[]) {
         HashMap<String, Double> balance = new HashMap<>();
-        //ConcurrentHashMap balance<String, Double> = new ConcurrentHashMap<>(); // for multi-threading
+        //ConcurrentHashMap<String, Double> balance = new ConcurrentHashMap<>(); // for multi-threading
 
         balance.put("John Doe", 3434.34);
-        balance.put("Tom Smith", null);
+        balance.put("Tom Smith", null);//concurrenthashmap e thakte parbe na egulo.....null key value thakte pare na shekhane
         balance.put("Jane Baker", null);
         balance.put("Tod Hall", 99.22);
         balance.put("Ralph Smith", -19.08);

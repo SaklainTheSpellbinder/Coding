@@ -38,12 +38,13 @@ public class MyGenerics3<T extends X & Y & Z> {/// ekhane T extends X & Y & Z da
     }
 
     public static void main(String[] args) {
-        MyX objX = new MyX();
         MyGenerics3<MyX> myGenerics = new MyGenerics3<>();
+        MyX objX = new MyX();
         myGenerics.setObj(objX);
         myGenerics.a.f1();
         myGenerics.a.f2();
         myGenerics.a.f3();
+        myGenerics.getObj().f3();
         System.out.println(myGenerics.getObj());
     }
 }

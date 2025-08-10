@@ -14,6 +14,6 @@ class BufferedReaderDemo {
         }
         br.close();
         fr.close();
-
+        //era ekta large chunk(8 kb types) of memory aage thekei niye fele then amra okhan thekei mainly read kori.....ete proti muhurte disk e read kora lagtese na
     }
 }

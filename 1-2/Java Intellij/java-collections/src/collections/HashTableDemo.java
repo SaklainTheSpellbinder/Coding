@@ -2,6 +2,8 @@ package collections;
 
 import java.util.Enumeration;
 import java.util.Hashtable;
+import java.util.Iterator;
+import java.util.Map;
 
 class HashTableDemo {
 
@@ -34,5 +36,28 @@ class HashTableDemo {
         balance.put(key, bal + 1000);
         System.out.println(key + "'s new balance: " + balance.get(key));
 
+        for (Map.Entry<String, Double> entry : balance.entrySet()) {
+            System.out.println("Key: " + entry.getKey() + ", Value: " + entry.getValue());
+        }
+
+        balance.forEach((key1, value) ->
+                System.out.println("Key: " + key1 + ", Value: " + value)
+        );
+
+        for (Double value : balance.values()) {
+            System.out.println("Value: " + value);
+        }
+
+        Iterator<Map.Entry<String, Double>> iterator = balance.entrySet().iterator();
+        while (iterator.hasNext()) {
+            Map.Entry<String, Double> entry = iterator.next();
+            System.out.println("Key: " + entry.getKey() + ", Value: " + entry.getValue());
+        }
+
+        balance.entrySet().stream()
+                .filter(entry -> entry.getValue() > 0)
+                .forEach(entry ->
+                        System.out.println(entry.getKey() + ": " + entry.getValue())
+                );
     }
 }

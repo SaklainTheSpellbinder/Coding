@@ -16,7 +16,7 @@ class DirectoryDemo {
     }
 
     public static void main(String args[]) {
-        String dirname = "files/dir";
+        String dirname = "src/files/dir";
         File f = new File(dirname);
         visitDir(f);
     }

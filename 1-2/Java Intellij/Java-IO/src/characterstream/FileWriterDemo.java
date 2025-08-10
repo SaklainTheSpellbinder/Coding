@@ -10,19 +10,22 @@ class FileWriterDemo {
         char buffer[] = new char[source.length()];
         source.getChars(0, source.length(), buffer, 0);
 
-        Writer f0 = new FileWriter("files/file1.txt");
+        Writer f0 = new FileWriter("src/files/file1.txt");
         for (int i = 0; i < buffer.length; i += 2) {
             f0.write(buffer[i]);
         }
         f0.close();
 
-        FileWriter f1 = new FileWriter("files/file2.txt");
+        FileWriter f1 = new FileWriter("src/files/file2.txt");
         f1.write(buffer);
         f1.close();
 
-        FileWriter f2 = new FileWriter("files/file3.txt");
+        FileWriter f2 = new FileWriter("src/files/file3.txt");
 
         f2.write(buffer, buffer.length - buffer.length / 4, buffer.length / 4);
+        f2.write("\n");
+        f2.write("Hey you out there");//string lekha jay uri baba
+        f2.flush();
         f2.close();
     }
 }

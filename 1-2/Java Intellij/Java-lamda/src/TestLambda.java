@@ -1,4 +1,4 @@
-@FunctionalInterface
+@FunctionalInterface  //functional interface mane exactly ekta abstract method thakbe
 interface MyNumber {
     double getValue();
 }
@@ -32,7 +32,7 @@ public class TestLambda {
         System.out.println(myNumber.getValue());
 
         NumericTest numericTest;
-        numericTest = n -> n % 2 == 0;
+        numericTest = (n) -> n % 2 == 0;
         System.out.println(numericTest.test(107));
         numericTest = n -> n >= 0;
         System.out.println(numericTest.test(-10));
@@ -62,5 +62,25 @@ public class TestLambda {
             return result;
         };
         System.out.println(stringFunction.func("hello world"));
+
+        StringFunction sf=new StringFunction() {//anonymous class object
+            @Override
+            public String func(String n) {
+                return "Cholo ekshate doore thaki";
+            }
+        }; //semicolon dite bhulbe naaaaaaaaaaaaaaaa
+
+        //egula to interface tai just hoy oije instance niye pashe lekha lagbe ba ebhabe anonymous class...
+
+        System.out.println(sf.func("Helloo"));
+
+        StringFunction sf2=n->"cholo more jaiiiiiiiiiiiiiiiiiiiiiiiiiii";
+        System.out.println(sf2.func("rfrfrfrf"));
+
+        //but thread start er shomoy jevabe likhi oivabe lekha possible na karon....eta thread to class...r egula to interface
+        new Thread(()-> System.out.println("cholo shobai")).start();
+        //eta thread class bole...mainly constructor e amra new runnable interface er lamda likhe pass korsi....bujhco???
+
+        NumericFunction nm1=(n)->12; //evaabe likhle oije return lekha jabe...return likhle third bracket diye likhte hobe
     }
 }

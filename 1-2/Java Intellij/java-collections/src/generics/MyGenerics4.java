@@ -33,7 +33,7 @@ public class MyGenerics4 {
         test.showVal();
         test2.showVal();
         Integer [] iArray = {1, 2, 3, 4, 5};
-        System.out.println(GenCons.isIn(1, iArray));
+        System.out.println(GenCons.isIn(1, iArray));//not necessarily  <> eta dewa lagbe
         System.out.println(test.<Integer>isIn2(1, iArray));
     }
 }
