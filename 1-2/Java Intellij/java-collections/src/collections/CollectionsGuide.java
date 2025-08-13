@@ -170,6 +170,10 @@ public class CollectionsGuide {
         String[] preSizedArray = fruits.toArray(new String[fruits.size()]);
         System.out.println("Pre-sized array: " + Arrays.toString(preSizedArray));
 
+        String[] heyArray=new String[fruits.size()];
+        fruits.toArray(heyArray);//ebhabeo possibleeeeeeeeeeeeeeeeee
+        System.out.println("hey array: " + Arrays.toString(heyArray));
+
         System.out.println();
 
         // 7. ARRAYLIST SPECIFIC METHODS
