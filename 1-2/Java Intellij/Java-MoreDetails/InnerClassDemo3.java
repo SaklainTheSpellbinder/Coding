@@ -7,6 +7,7 @@ class Outer3 {
 
     void test() {
         for (int i = 0; i < 5; i++) {
+            outer_x+=i;
             class Inner {
 
                 Inner() {

@@ -7,9 +7,12 @@ public class ScannerTest {
         int a = scn.nextInt();
         System.out.println("Enter a string: ");
         String b = scn.next();
+        System.out.println("Enter a boolean: ");
+        boolean c=scn.nextBoolean();//only true or false(case ignore kore) lkihle nite pare nahole inputmismatchexception dibe.....
         System.out.println("You Entered: ");
         System.out.println(a);
         System.out.println(b);
+        System.out.println(c);
         System.out.println("Enter a series of integers: Ctrl-D to stop");
         while(scn.hasNextInt())
         {
@@ -19,6 +22,9 @@ public class ScannerTest {
         {
             System.out.println(scn.nextLine());
         }*/
+
+
         scn.close();
+
     }
 }

@@ -20,7 +20,7 @@ class Outer2 {
 
         void display() {
             System.out.println(Outer2.this.outer_x);
-        }
+        } //eta mainly outer er outer_x use korte likhse...eta na likhle outer_x ei inner class er ta use hoye jeto
     }
 
     void showy() {
