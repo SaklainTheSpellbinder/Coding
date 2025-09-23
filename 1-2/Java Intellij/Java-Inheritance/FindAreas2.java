@@ -7,6 +7,10 @@ abstract class Figure2 {
     }
 
     abstract double area();
+
+    void f1(){
+
+    }
 }
 
 class Rectangle2 extends Figure2 {

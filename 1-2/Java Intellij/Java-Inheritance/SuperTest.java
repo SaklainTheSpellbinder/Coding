@@ -1,6 +1,6 @@
 
 
-class BoxWeightNew extends Box {
+class   BoxWeightNew extends Box {
     double weight;
 
     

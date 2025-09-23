@@ -3,7 +3,7 @@ public class TestArrays {
 
     public static void changeString(String a){
         a="NameeeeeeeeeeeeeeeeeeeeeeeeeeChanged Maybe???";//ei change baire visible hobe na....karon ekhon ei a reference ta just aager copy howa b er reference na hoye change hoye notun reference hoye geche that's it...aager tar kono change hoyni....hehehehehehehe
-        //shudu string na emon Integer, Double eshob typewrapper use holeo hoto...java te shudu pass b y value hoy(reference type er khetre refernce er value copy hoy rki) so ekhon as a result change hoye notun reference e point kore ei local variable...but main tar no change
+        //shudu string na emon Integer, Double eshob typewrapper use holeo hoto...java te shudu pass by value hoy(reference type er khetre reference er value copy hoy rki) so ekhon as a result change hoye notun reference e point kore ei local variable...but main tar no change
         a=new String("pintintintint");//new korleo hobe na....same kaj ee to maybe...eta to r o beshi hobe na
     }
 
@@ -23,7 +23,7 @@ public class TestArrays {
         int arr2[];
         arr2=new int[6];
         for(int i=0;i<arr2.length;i++){
-            System.out.println(arr2[i]);
+            System.out.println(arr2[i]);//null diye already initialize kore felse java
         }
 
         String b="TingTong";

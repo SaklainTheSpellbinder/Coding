@@ -3,7 +3,7 @@ class OuterStaticInner {
     private int outer_x = 100;
 
     OuterStaticInner() {
-        System.out.println("OuterStaticInner Constuctor");
+        System.out.println("OuterStaticInner Constructor");
     }
 
     void test() {
@@ -15,7 +15,7 @@ class OuterStaticInner {
     static class Inner {
 
         Inner() {
-            System.out.println("Inner Constuctor");
+            System.out.println("Inner Constructor");
         }
 
         void display(OuterStaticInner outer) {

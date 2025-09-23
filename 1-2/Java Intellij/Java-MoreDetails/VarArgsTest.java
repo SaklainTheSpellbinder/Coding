@@ -8,7 +8,7 @@ public class VarArgsTest {
     }
 
     static void vaTest(double ... v){
-        System.out.println("Int");
+        System.out.println("Double");
         for(double  x: v) {
             System.out.print(x + " ");
         }
@@ -54,6 +54,7 @@ public class VarArgsTest {
     public static void main(String[] args) {
         vaTest("Testing", 10, 20);
         vaTest("Hehe",true,false);
+        //vaTest("saklain"); eta ambiguous hobe
         //vaTest(true, false, false);
         VarArgsTest st=new VarArgsTest();
         vaTest(); // ambiguity type 1

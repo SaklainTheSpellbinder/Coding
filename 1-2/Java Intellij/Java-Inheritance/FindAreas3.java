@@ -12,12 +12,14 @@ abstract class Fig {
 public class FindAreas3 {
     public static void main(String[] args) {
         Fig rec = new Fig(10, 20) {
+            @Override
             double area() {
                 return d1 * d2;
             }
         };
         System.out.println(rec.area());
         Fig tr = new Fig(10, 20) {
+            @Override
             double area() {
                 return d1 * d2 / 2;
             }

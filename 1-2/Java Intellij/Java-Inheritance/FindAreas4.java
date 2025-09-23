@@ -14,7 +14,8 @@ public class FindAreas4 {
             double area(double d1, double d2) {
                 return d1 * d2 / 2;
             }
-        };
+        }; //lamda mereche ekhane
         System.out.println(tr.area(10, 20));
+        //Fig2 tintin = (d1, d2) -> {return d1 * d2 / 2;}; //interface er belay hoy egula
     }
 }

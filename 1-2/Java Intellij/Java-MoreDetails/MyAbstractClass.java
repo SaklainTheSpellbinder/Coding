@@ -9,7 +9,7 @@ abstract class MyAbstractClass2 implements MyInterface {
 }
 
 class MyConcreteClass extends MyAbstractClass2 {
-    //override kora ee lagbe
+    //override kora ee lagbe  //oi default r use kora jabe na
 
     @Override
     public void greet() {

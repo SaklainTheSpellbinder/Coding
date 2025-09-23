@@ -14,5 +14,7 @@ public class MoreJai {
         System.out.println(s4==s5);
         System.out.println(s5.equals(s4));
         System.out.println(s5==s6);//string pool check korbe....string literal same dekhe s6 r notun toiri hobe na...same ta kei point korbe
+        String s7=s1.intern();//string pool e niye ashche
+        System.out.println(s7==s5);
     }
 }

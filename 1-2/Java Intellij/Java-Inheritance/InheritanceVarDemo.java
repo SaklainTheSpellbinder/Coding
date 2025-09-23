@@ -90,11 +90,11 @@ public class InheritanceVarDemo {
         var z = getObject(2);
 
         System.out.println(x.getA());
-        System.out.println(y.getA()); // Error, type of y is AA
-        System.out.println(z.getA()); // Error, type of z is AA
+        System.out.println(y.getA()); // getB file Error, type of y is AA
+        System.out.println(z.getA()); // getC dile Error, type of z is AA //o child er method to dekhte parbe na but child er override kora method dekhte parbe btw
         x.printClass();//AA er printclass hobe
-        y.printClass();//BB er printclass ee hobe.....supercalss instance diye sybclass er override kora jinish print kora jay
-        z.printClass();//CC er printclass ee hobe.....supercalss instance diye sybclass er override kora jinish print kora jay
+        y.printClass();//BB er printclass ee hobe.....supercalss instance diye subclass er override kora jinish print kora jay
+        z.printClass();//CC er printclass ee hobe.....supercalss instance diye subclass er override kora jinish print kora jay
         
     }
 }
