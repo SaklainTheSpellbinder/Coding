@@ -12,7 +12,7 @@ public class CreateThread  {
     //basically the fact is jokhon kono object er kono method er upor lock boshano hoy....
     //tokhon kono thread oi lock e dhuklkle onno kono thread oi method to doorer kotha oi object er onnanno synchronixed method gulo teo dhukte pare na....
     //karon ekta object er ektai monitor ache
-    //but static method er upor synchronized boshale oita cholte parbem
+    //but static method er upor synchronized boshale oita cholte parbe
 
     synchronized public void f1() {
         for (int i = 10; i > 0; i--) {

@@ -12,6 +12,7 @@ public class ExceptionTryNested {
                     a = 12345 / (b / c);
                 } catch (ArithmeticException e) {
                     System.out.println(e);
+                    //e.printStackTrace();
                     a = 0;
                 } finally {
                     System.out.println(i + ": " + 0);

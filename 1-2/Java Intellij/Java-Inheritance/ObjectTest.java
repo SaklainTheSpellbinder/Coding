@@ -15,13 +15,13 @@ class Point {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (o == this)
+    public boolean equals(Object w) { //well o w ja iccha lekha jabe at least...but Object ee likhte hobe parameter e
+        if (w == this)
             return true;
-        if (!(o instanceof Point)) {
+        if (!(w instanceof Point)) {
             return false;
         }
-        Point p = (Point) o;
+        Point p = (Point) w;
         if (p.x == this.x && p.y == this.y)
             return true;
         return false;

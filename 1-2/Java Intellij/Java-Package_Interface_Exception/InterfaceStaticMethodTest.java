@@ -15,6 +15,7 @@ interface MyIFStatic {
 class MyIFStaticImp implements MyIFStatic {
     // Only getNumber() defined by MyIF needs to be implemented.
     // getString() can be allowed to default.
+    @Override
     public int getNumber() {
         return 100;
     }
