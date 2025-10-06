@@ -66,10 +66,10 @@ class FileDemo {
         }
         FileWriter writer2=new FileWriter(f5,true);
         writer2.write("Hey tintin, kemon acho tumi?? tf e mara khawar prep kotodur?\n");
-        writer2.write("ten thousand thunderous typhoon");
+        writer2.write("ten thousand thunderous typhoon\n");
         writer2.close();
         File f6=new File("src");
         System.out.println(Arrays.toString(f6.list()));//eta khali dir or file er name er string er array return kore...and jehetu array er kono toString alada kore nai....tai Arrays.toString() use kora laage just print dile hashcode print hobe
-        System.out.println(Arrays.toString(f6.listFiles()));//getpath er moto string er array return kore....
+        System.out.println(Arrays.toString(f6.listFiles()));//File er array return kore....
     }
 }

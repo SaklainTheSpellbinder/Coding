@@ -1,9 +1,9 @@
 public class EnumDemo2 {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         Apple ap;
         System.out.println("Here are all Apple constants:");
         // use values()
-        Apple allApples[] = Apple.values();
+        Apple[] allApples = Apple.values();
         for (Apple a : allApples) {
             System.out.println(a);
         }

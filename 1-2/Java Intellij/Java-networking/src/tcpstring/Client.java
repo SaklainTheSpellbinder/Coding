@@ -7,8 +7,9 @@ public class Client {
     public Client(String serverAddress, int serverPort) {
         try {
             SocketWrapper socketWrapper = new SocketWrapper(serverAddress, serverPort);
+            int id=(int)socketWrapper.read();
             new ReadThread(socketWrapper);
-            new WriteThread(socketWrapper, "Client");
+            new WriteThread(socketWrapper, "Client" +id);
         } catch (Exception e) {
             System.out.println(e);
         }

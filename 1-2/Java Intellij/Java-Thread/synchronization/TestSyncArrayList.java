@@ -13,7 +13,7 @@ class MyThread implements Runnable {
         t.start();
     }
 
-    public void run() {//ekhane synchronized diye labh nai....eta hocche this objecg ke lock kore....but 2 ta thread to duita alada object so eder run o alada....but oije share er jonno jei object ta pathacchi...oder vitor o alada object chilo but oita to amara same ta ee assign korsi constructor e....tai rki eta hobe
+    public void run() {//ekhane synchronized diye labh nai....eta hocche this object ke lock kore....but 2 ta thread to duita alada object so eder run o alada....but oije share er jonno jei object ta pathacchi...oder vitor o alada object chilo but oita to amara same ta ee assign korsi constructor e....tai rki eta hobe
         for (int i = 1; i <= 10000; i++) 
         {
             list.add(String.valueOf(i));

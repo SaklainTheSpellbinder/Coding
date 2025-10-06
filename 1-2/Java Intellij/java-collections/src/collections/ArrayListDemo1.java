@@ -9,7 +9,7 @@ public class ArrayListDemo1 {
         // create an array list
         List<String> al = new ArrayList<>();//non synchronized eta.....stringbuilder er moto
         System.out.println("Initial size of al: " + al.size());
-
+        System.out.println("Contents of al: " + al);
         // add elements to the array list
         al.add("C");
         al.add("A");
@@ -17,6 +17,7 @@ public class ArrayListDemo1 {
         al.add("B");
         al.add("D");
         al.add("F");
+        System.out.println("Contents of al: " + al);
         al.add(1, "X");//add kore onnoguloke shift kore dibe
         al.set(3,"tintin");//change kore value //idx ultapalta dile ArrayIndexOutOfBoundsException
 
@@ -33,6 +34,7 @@ public class ArrayListDemo1 {
         al.remove("F");
         al.remove(2);//remove korte parle okay...na korte parle no error....jeta remove kore oita return kore idolo
         al.remove("tintin");
+        al.remove("saklain");
 
         System.out.println("Size of al after deletions: " + al.size());
         System.out.println("Contents of al: " + al);

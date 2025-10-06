@@ -27,7 +27,7 @@ public class WriteThread implements Runnable {
                 socketWrapper.write(name + ":" + s);
             }
         } catch (Exception e) {
-            System.out.println(e);
+            System.out.println("Disconnected");
         } finally {
             try {
                 socketWrapper.closeConnection();

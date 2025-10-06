@@ -5,12 +5,13 @@ import java.io.FileOutputStream;
 import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 
 public class ChangingOutputStream {
     public static void main(String[] args) throws FileNotFoundException {
         int[] a={1,2,3,4,56,7,8,8,8,8,88,8,8};
-        //List<Integer> l= Arrays.asList(a);
+        //List<Integer> l= new ArrayList<>(Arrays.asList(a)); //int er kono list possible na
 
         Integer[] b={2,3,54,5,6,6,3,2,2,3,3,34,44,443,4};
         //ArrayList<Integer>l2=(ArrayList<Integer>) Arrays.asList(b);//typecast kroleo hobe na....List hocche parent class of ArrayList downcasting to hoyna....runtime error

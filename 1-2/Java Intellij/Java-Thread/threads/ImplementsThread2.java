@@ -5,7 +5,7 @@ class NewThread3 implements Runnable {
     public void run() {
         try {
             for (int i = 100; i > 0; i--) {
-                System.out.println("Child Thread: " + i);
+                System.out.println("Child Thread: " + i+ " " + Thread.currentThread().getName());
                 Thread.sleep(1000);
             }
         } catch (InterruptedException e) {
@@ -18,7 +18,11 @@ class NewThread3 implements Runnable {
 public class ImplementsThread2 {
     public static void main(String[] args) {
         Runnable r = new NewThread3();
-        Thread t = new Thread(r);
+        Thread t = new Thread(r,"Tingtong first thread");
         t.start();
+
+        NewThread3 nt=new NewThread3();
+        Thread t1=new Thread(nt,"Tintin second thread");
+        t1.start();
     }
 }

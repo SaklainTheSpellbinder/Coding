@@ -1,7 +1,7 @@
 // Use an enum constructor, instance variable, and method.
 enum AppleNew {
     Jonathan(10), GoldenDel(9), RedDel(12), Winesap(15), Cortland(8);
-//ekhane konotay constructor na dile hobe na
+    //ekhane konotay constructor na dile hobe na
     //tobe default constructor overload korle hobe
     private int price; // price of each apple
 
@@ -18,10 +18,10 @@ enum AppleNew {
         this.price = price;
     }
 
-//    @Override
-//    public String toString() {
-//        return "AppleNew {price=" + price + "}";
-//    }
+    @Override
+    public String toString() {
+        return this.name() + " {price=" + price + "}";
+    }
 }
 
 public class EnumDemo3 {

@@ -33,7 +33,7 @@ class ThreadCounterSyncBlock implements Runnable {
     }
 
     public void run() {
-        synchronized(sharedCounter) {//synchronized er moddhe this dile hobe na....tahole to just ei object kei lock korbe....but amader to shared jinish ta ke lock korte hobe//common lock
+        synchronized(sharedCounter) {//synchronized er moddhe this dile hobe na....tahole to just ei thread object kei lock korbe....but amader to shared jinish ta ke lock korte hobe//common lock
          sharedCounter.count();
         }
     }

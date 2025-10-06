@@ -27,7 +27,7 @@ class FileInputStreamDemo {
         if (f.read(b, n / 2, n / 2) != n / 2) {
             System.out.println("couldn't read " + n / 2 + " bytes.");
         }
-        System.out.println(new String(b, 0, b.length));
+        System.out.println(new String(b, n/2, n/2)); //ei b er prothom ordhek hocche aager data rakhse karon ogula to amra remove na kore just end er ordhek e new data gula store korsi
         System.out.println("\nStill Available: " + f.available());
 
         f.close();

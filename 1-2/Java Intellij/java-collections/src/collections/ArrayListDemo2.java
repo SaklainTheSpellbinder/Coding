@@ -61,7 +61,7 @@ public class ArrayListDemo2 {
         System.out.println();
 
         // convert array to list
-        List<Integer> alist = Arrays.asList(ia);         //ekhane jet list toiri hoy eta immutable....just read only...remove add kora jabe na
+        List<Integer> alist = Arrays.asList(ia);         //ekhane jet list toiri hoy eta immutable....just read only...remove add kora jabe na...abstract list
         //alist.add(2);  eta runtime error dibe....compile time na
 
         // foreach iterate

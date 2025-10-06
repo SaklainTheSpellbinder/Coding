@@ -31,12 +31,14 @@ public class AutoBoxingUnboxingDemo {
         i = iOb + (iOb / 3);
         System.out.println("i after expression: " + i);
 
-        Integer intOb = 100;
+        Integer intOb = (Integer) 100;//ei Integer e type cast ta na korleo same ee...no pera
         Double doubleOb = 98.6;
         // Auto-unboxing also allows you to mix different types of
         // numeric objects in an expression. Once the values are unboxed,
         // the standard type promotions and conversions are applied.
         doubleOb = doubleOb + intOb;
         System.out.println("dOb after expression: " + doubleOb);
+
+        Integer hehe=(int) 99.08; //ekhane abar Integer e cast korle hobe na.... 99.08 primitive...eta int ei jete pare...direct Integer er wrapper e jawa possible na
     }
 }

@@ -8,7 +8,7 @@ interface iStack<T> {/// ekhaneo extends number dewa jay...but dorkar nai to....
 }
 
 class MyStack<T extends Number> implements iStack<T> {///implements er por call kore okhane T extends likhle hobe na to
-    T s[];///ekhane kono dhoroner new diye kichu kora possible na....eta just ekta bhul kaj hobe....karon type to janina
+    T[] s;///ekhane kono dhoroner new diye kichu kora possible na....eta just ekta bhul kaj hobe....karon type to janina
     int top;
 
     MyStack(T[] s) {/// ekhaane mainly array argument diye newa hoise nahole T er to array create kora jabe na....jehetu amra er type ee janina...array kemne banabo

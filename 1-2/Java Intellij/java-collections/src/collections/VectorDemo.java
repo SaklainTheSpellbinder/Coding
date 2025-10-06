@@ -22,7 +22,8 @@ class VectorDemo {
         // iterate
         for (int i = 0; i < v.size(); i++) {
             Integer a = v.elementAt(i);
-            System.out.println(a);
+            Integer b=v.get(i);
+            System.out.println(a+" "+b);
         }
     }
 }

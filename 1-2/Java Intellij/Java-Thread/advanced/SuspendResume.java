@@ -78,3 +78,19 @@ public class SuspendResume {
         System.out.println("advanced.Main thread exiting.");
     }
 }
+
+/*
+* Thread "One" acquires the lock: When Thread "One" reaches the synchronized(this) block, it waits until it can acquire the lock on the ob1 object (this refers to ob1 in this context).
+
+Thread "One" owns the lock: Once inside the block, it now officially owns the monitor.
+
+wait() is called legally: Now, when it calls wait(), the call is valid. The wait() method does two things:
+
+It releases the lock it was holding. This is crucial because it allows another thread (like the main thread) to acquire the lock to call myResume().
+
+It puts the thread into a "waiting" state.
+
+main thread calls myResume(): The myResume() method is also synchronized. The main thread acquires the lock on ob1 (which Thread "One" released), sets suspendFlag to false, and calls notify().
+
+Thread "One" wakes up: The notify() call wakes up Thread "One". It will then try to re-acquire the lock before it can continue executing after the wait() call.
+* */

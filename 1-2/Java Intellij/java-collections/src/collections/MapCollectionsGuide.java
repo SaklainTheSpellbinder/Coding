@@ -121,7 +121,7 @@ public class MapCollectionsGuide {
 
         // remove(Object key) - Removes and returns value
         Integer removedValue = map1.remove("cherry");
-        System.out.println("Removed 'cherry', value was: " + removedValue); // null
+        System.out.println("Removed 'cherry', value was: " + removedValue); // null ..remove korte parenai je na....ekhane value ee null chilo
 
         // remove(Object key, Object value) - Only removes if value matches
         boolean removeSuccess = map1.remove("banana", 20);

@@ -22,7 +22,7 @@ public class SocketWrapper {
         ois = new ObjectInputStream(socket.getInputStream());
     }
 
-    public Object read() throws IOException, ClassNotFoundException {
+    public Object read() throws IOException, ClassNotFoundException {//khali Exception throw korleo hobe btw
         return ois.readObject();
     }
 

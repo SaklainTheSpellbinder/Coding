@@ -40,6 +40,8 @@ void mergesort(vector<int>&nums,int si,int ei,int& inv_count){
     merge(nums,si,mid,ei,inv_count);
 }
 
+
+
 int main(){
     vector<int>arr={2,4,1,3,5};
     int inv_count=0;
