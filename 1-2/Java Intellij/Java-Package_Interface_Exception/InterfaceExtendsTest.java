@@ -10,7 +10,7 @@ interface I3 extends I1, I2 {
     void f3();
 }
 
-class MyClass implements I3 {
+class MyClass implements I3 ,I2{
     public void f1() {
         System.out.println("Implement f1");
     }

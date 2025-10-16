@@ -1,4 +1,5 @@
-class A {
+interface A {
+    void tintinitnitnitni();
     // non-nested interfaces can be default or public
     // nested interfaces can be private/protected/public/default
     interface NestedIF {

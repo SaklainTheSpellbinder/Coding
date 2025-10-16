@@ -7,5 +7,11 @@ public class JOptionPaneTest {
         int num1 = Integer.parseInt(s1);
         int num2 = Integer.parseInt(s2);
         JOptionPane.showMessageDialog(null,"Sum is : " + (num1+num2));
+
+        Integer a=100;
+        a.intValue();
+
+        int i=Integer.valueOf(s1);
+        System.out.println(i);
     }
 }

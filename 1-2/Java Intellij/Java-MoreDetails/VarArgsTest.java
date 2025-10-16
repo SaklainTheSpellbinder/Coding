@@ -57,7 +57,7 @@ public class VarArgsTest {
         //vaTest("saklain"); eta ambiguous hobe
         //vaTest(true, false, false);
         VarArgsTest st=new VarArgsTest();
-        vaTest(); // ambiguity type 1
+        vaTest(); // ambiguity type 1 //int r boolean er moddhe ambiguity
         st.vaTest(1, 2, 3); // ambiguity type 2 with vaTest(int n, int ... v) and vaTest(int ... v)
     }
 }

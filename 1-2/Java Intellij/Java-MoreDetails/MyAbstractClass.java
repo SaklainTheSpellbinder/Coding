@@ -4,15 +4,23 @@ interface MyInterface {
     }
 }
 
+interface hehe{
+    default void greet(){
+        System.out.println("Hello from hehe");
+    }
+}
+
 abstract class MyAbstractClass2 implements MyInterface {
     abstract public void greet();
 }
 
-class MyConcreteClass extends MyAbstractClass2 {
+class MyConcreteClass extends MyAbstractClass2 implements hehe,MyInterface {
     //override kora ee lagbe  //oi default r use kora jabe na
 
     @Override
     public void greet() {
+        hehe.super.greet();
+        //MyInterface.super.greet();
         System.out.println("Jo main raat hu...  ");
     }
 }

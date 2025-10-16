@@ -4,9 +4,9 @@ enum Apple {
 }
 
 public class EnumDemo {
-    public static void main(String args[]) {
-        Apple ap;
-        ap = Apple.RedDel;
+    public static void main(String[] args) {
+        Apple ap=Apple.Winesap;
+        //ap = Apple.RedDel;
         System.out.println("Value of ap: " + ap);
         System.out.println();
         System.out.println(Apple.Cortland);//evabeo print kora jay name
@@ -17,7 +17,7 @@ public class EnumDemo {
             case Apple.Jonathan://complete reference e lekha etay emon likhle compilation error howar kotha....jodio hoyni rki
                 System.out.println("Jonathan is red.");
                 break;
-            case GoldenDel:
+            case Apple.GoldenDel:
                 System.out.println("Golden Delicious is yellow.");
                 break;
             case RedDel:
@@ -30,5 +30,7 @@ public class EnumDemo {
                 System.out.println("Cortland is red.");
                 break;
         }
+
+        System.out.println(ap.getClass().getSimpleName()); //eta Apple print korbe not GoldenDel
     }
 }

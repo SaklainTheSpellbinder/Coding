@@ -32,7 +32,7 @@ public class MyGenerics1<T> {
         myGenerics1.setObj("Hello");
         String str = myGenerics1.getObj();//no casting needed.....classcastexception ke na boli
         System.out.println(str);
-        MyGenerics1 noGenerics = new MyGenerics1<>(); // still possible
+        MyGenerics1 noGenerics = new MyGenerics1<>("choto mohashoy tuba mia"); // still possible
         noGenerics.setObj(20);
         System.out.println(noGenerics.getObj());
         noGenerics.setObj("World");

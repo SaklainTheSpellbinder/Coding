@@ -5,17 +5,19 @@ class DirectoryDemo {
 
     public static void visitDir(File f) {
         if (f.isDirectory()) {
-            File s[] = f.listFiles();
-            for (int i = 0; i < s.length; i++) {
-                System.out.println(s[i]);
-                if (s[i].isDirectory()) {
-                    visitDir(s[i]);
+            File[] s = f.listFiles();
+            if (s != null) {
+                for (File file : s) {
+                    System.out.println(file);
+                    if (file.isDirectory()) {
+                        visitDir(file);
+                    }
                 }
             }
         }
     }
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         String dirname = "src/files/dir";
         File f = new File(dirname);
         visitDir(f);

@@ -39,6 +39,6 @@ public class AutoBoxingUnboxingDemo {
         doubleOb = doubleOb + intOb;
         System.out.println("dOb after expression: " + doubleOb);
 
-        Integer hehe=(int) 99.08; //ekhane abar Integer e cast korle hobe na.... 99.08 primitive...eta int ei jete pare...direct Integer er wrapper e jawa possible na
+        Integer hehe=(int) 99.08; //ekhane abar Integer e cast korle hobe na.... 99.08 primitive double...eta int ei jete pare...direct Integer er wrapper e jawa possible na
     }
 }

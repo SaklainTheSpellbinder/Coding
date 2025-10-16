@@ -8,7 +8,7 @@ using namespace std;
 int mcmRec(vector<int>arr,int i,int j){
     if(i==j)
         return 0;
-    int ans=INT32_MAX;
+    int ans=INT_MAX;
     
     for(int k=i;k<j;k++){
         //(i,k)
@@ -27,7 +27,7 @@ int mcmMem(vector<int>arr,int i,int j,vector<vector<int>>&dp){
     if(dp[i][j]!=-1){
         return dp[i][j];
     }
-    int ans=INT32_MAX;
+    int ans=INT_MAX;
 
     for(int k=i;k<j;k++){
         //(i,k)
@@ -57,7 +57,7 @@ int mcmTab(vector<int>arr,int i,int j){
         for(int len=2;len<n;len++){
             for(int i=1;i<=n-len;i++){
                 int j=i+len-1;
-                dp[i][j]=INT32_MAX;
+                dp[i][j]=INT_MAX;
                 for(int k=i;k<j;k++){
                     int cost1=dp[i][k];
                     int cost2=dp[k+1][j];

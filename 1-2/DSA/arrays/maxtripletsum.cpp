@@ -20,7 +20,7 @@ int main(){
             }
 
             vector<int>ans(3);
-            int maxsum=INT32_MIN;
+            int maxsum=INT_MIN;
             for(int i=0;i<n-2;i++){
                 int sum=arr[i]+arr[i+1]+arr[i+2];
                 if(sum>maxsum){

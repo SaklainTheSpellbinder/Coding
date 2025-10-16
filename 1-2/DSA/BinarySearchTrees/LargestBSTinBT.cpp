@@ -58,7 +58,7 @@ public:
 
 Info largestBSTUtil(Node* root, int& maxSize) {
     if (root == NULL) {
-        return Info(true, INT32_MAX, INT32_MIN, 0);
+        return Info(true, INT_MAX, INT_MIN, 0);
     }
 
     // Leaf node

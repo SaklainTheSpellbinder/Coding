@@ -18,7 +18,7 @@ void revealsecret(A &obj){
     cout<<obj.secret<<endl;
 }
 
-int main(){
+int main(){ 
     A a1;
     B b1;
     b1.showSecret(a1);

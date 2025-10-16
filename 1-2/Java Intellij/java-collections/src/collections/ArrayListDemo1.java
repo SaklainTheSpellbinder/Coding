@@ -41,7 +41,7 @@ public class ArrayListDemo1 {
 
         al.forEach(e -> System.out.println(e));
 
-        List al2=new ArrayList();//type safe na but ja iccha rakha jay rki...but use korte hole to typecast kore newa lagbe
+        List al2=new ArrayList<>();//type safe na but ja iccha rakha jay rki...but use korte hole to typecast kore newa lagbe
         al2.add("Saklain");
         al2.add(3);
         al2.add(new Thread());

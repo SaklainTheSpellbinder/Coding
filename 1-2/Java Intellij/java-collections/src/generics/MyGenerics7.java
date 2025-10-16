@@ -79,7 +79,7 @@ public class MyGenerics7 {
                 new FourD(4, 5, 12, 13)
         };
         Coords<FourD> fourDCoords = new Coords<>(fourD);
-        BoundedWildcard.showXY(fourDCoords);
+        generics.BoundedWildcard.showXY(fourDCoords);
         BoundedWildcard.showXYZ(fourDCoords);
         BoundedWildcard.showAll(fourDCoords);
     }

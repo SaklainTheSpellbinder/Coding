@@ -39,9 +39,3 @@ public class TestSyncArrayList {
         System.out.println(list.size());
     }
 }
-//The sun rises and sets with her
-
-//Her laughter, soft as summer rain,
-//Awakes the petals, soothes the pain,
-//Her silence holds a gentle ache,
-//Like twilight on a silver lake.

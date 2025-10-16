@@ -18,7 +18,7 @@ public class CreateThread  {
 
     synchronized public void f1() {
         for (int i = 10; i > 0; i--) {
-            System.out.println("f1(): " + i + " " + Thread.currentThread().getName());
+            System.out.println("f1(): " + i + " " + Thread.currentThread().getName() );
             try {
                 Thread.sleep(500);
             } catch (InterruptedException e) {

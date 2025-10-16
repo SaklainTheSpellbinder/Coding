@@ -23,7 +23,7 @@ vector<int> leaders(vector<int>& arr) {
     int last=hehe.size()-1;
     while(first<=last){
         swap(hehe[first],hehe[last]);
-        first++;
+        first++; 
         last--;
     }
     return hehe;

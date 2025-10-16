@@ -8,7 +8,7 @@ public class Protection {
 
     void showTintin(){
         System.out.println("Guys i'm in showTintin() method of Protection class");
-        Tingtong oi=new Tingtong();
+        Tintin oi=new Tintin();
         System.out.println(oi.a+" Hey it's 'a' from the Tintin inner private class....cool eh?");
         System.out.println((oi.b +" wow b of Tintin is also accessible here"));
         System.out.println(oi.c + " Orreh c of Tintin is also accessible here");

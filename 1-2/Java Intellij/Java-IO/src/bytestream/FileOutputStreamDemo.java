@@ -8,6 +8,10 @@ class FileOutputStreamDemo {
                 + " to come to the aid of their country\n"
                 + " and pay their due taxes.";
         byte buf[] = source.getBytes();
+
+        char[] buf2=new char[1024];
+        source.getChars(0,source.length(),buf2,0);
+
         OutputStream f0 = new FileOutputStream("src/files/file1.txt");
 
         for (int i = 0; i < buf.length; i += 2) {

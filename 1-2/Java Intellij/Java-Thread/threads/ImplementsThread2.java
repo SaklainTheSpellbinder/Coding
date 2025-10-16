@@ -24,5 +24,7 @@ public class ImplementsThread2 {
         NewThread3 nt=new NewThread3();
         Thread t1=new Thread(nt,"Tintin second thread");
         t1.start();
+
+        new Thread(r,"hello").start(); //eta emne first thread second thread er shatei chobe but jodi amra run er aage synchonized likhi tajjole first r third ekshate cholte parbe na
     }
 }

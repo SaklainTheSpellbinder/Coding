@@ -51,6 +51,7 @@ public class ObjectSerializationDemo {
             object2 = (MyClass) ois.readObject();
             System.out.println("object2: " + object2);
             ois.close();
+            fis.close();
         } catch (Exception e) {
             System.out.println("Exception during deserialization: " + e);
             System.exit(0);

@@ -5,7 +5,7 @@
 using namespace std;
 
 int findMin(vector<int>& nums) {
-    int minm=INT32_MAX;
+    int minm=INT_MAX;
     int low=0,high=nums.size()-1;
     while(low<=high){
         int mid=(low+high)/2;

@@ -8,7 +8,7 @@ class Parent{
             cout<<"parent class show..\n";
         }
         virtual void hello(){//enables runtime polymorphism
-            cout<<"parent hello\n"; //derived class e redefine kora lagbei
+            cout<<"parent hello\n";
         }
 };
 

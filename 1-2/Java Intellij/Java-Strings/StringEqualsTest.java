@@ -17,5 +17,8 @@ public class StringEqualsTest {
         System.out.println(a == b); // true
         System.out.println(a == c); // false
         System.out.println(b == c); // false
+        s3=s3+"World";
+        System.out.println(a==s3);
+        System.out.println(a.equals(s3));
     }
 }

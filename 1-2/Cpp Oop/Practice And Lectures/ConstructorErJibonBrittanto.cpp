@@ -28,6 +28,7 @@ public:
 class C {
 public:
     C(int x , int y = 0) {
+        cout<<"oi tintin"<<endl;
         cout << x << " " << y << endl;
     }
 

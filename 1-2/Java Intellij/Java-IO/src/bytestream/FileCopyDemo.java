@@ -1,8 +1,5 @@
 package bytestream;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.io.*;
 
 class FileCopyDemo {
     public static void main(String args[]) throws Exception {
@@ -20,6 +17,10 @@ class FileCopyDemo {
 //        byte[] c=new byte[1024];
 //        in.read(c,2,3);
 //        out.write(c,2,3);
+        PrintWriter pw=new PrintWriter(System.out,true);
+        pw.println("orreh ami ekhon pw diye likhchi");
+        System.out.println("oi");
+        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
 
         byte[] b = new byte[1024];
         int chunks = in.available() / b.length;

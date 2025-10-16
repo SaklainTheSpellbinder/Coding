@@ -3,7 +3,7 @@
 #include<algorithm>
 using namespace std;
 int maxProfit(vector<int>& prices) {
-    int minprice=INT32_MAX;
+    int minprice=INT_MAX;
     int maxprofit=0;
     for(auto &value: prices){
         minprice=min(minprice,value);
