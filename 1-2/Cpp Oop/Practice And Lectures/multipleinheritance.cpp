@@ -14,7 +14,7 @@ class Student{
         float cgpa;
 };
 
-class TA : public Teacher, public Student {
+class TA : virtual public Teacher, virtual public Student {
     public:
         string name;
 };

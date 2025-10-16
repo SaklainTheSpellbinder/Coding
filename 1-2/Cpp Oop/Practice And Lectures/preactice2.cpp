@@ -21,15 +21,17 @@ public:
     }
 };
 
-inline void modifyValue(MyClass obj){
+inline void modifyValue(MyClass obj){//& dite hobe jodi change korte chai
     obj.getX()=100;
 }
 
 int main(){
     MyClass obj1;
     obj1.setX(50);
+    cout<<obj1.getX()<<endl;
     int& ref=obj1.getX();
     ref=75;
+    cout<<obj1.getX()<<endl;
     modifyValue(obj1);
     cout<<obj1.getX()<<endl;
     return 0;

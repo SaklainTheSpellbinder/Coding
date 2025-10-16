@@ -10,7 +10,7 @@ class Base{
 
 class Derived1 : public Base{
 public:
-    void printClass(){//auto virtual ekhon theke...entire chain e ee virtual thake tai eta runtime polymorphism hoy
+    void printClass(){//auto virtual ekhon theke...entire chain e ee virtual thake tai eta runtime polymorphism hoy...alada kore virtual bola laagbe na
         cout<<"Derived1"<<endl;
     }
 };
