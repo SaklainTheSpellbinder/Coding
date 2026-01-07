@@ -59,9 +59,17 @@ public:
 Samp input(){
     cout<<"Now inside input() function....we are going to create a new object here"<<endl;
     Samp s;
+    cout<<"Now we are going to set something"<<endl;
     s.set("Hello from the string set in input() function now shown by show() function");
     cout<<"setting done....returning from input() function"<<endl;
     return s;
+}
+
+Samp justCheck(Samp s){
+    cout<<"inside Just check...we are going to create another object now"<<endl;
+    Samp t;
+    t=s;
+    return t;
 }
 
 int main(){
@@ -70,5 +78,7 @@ int main(){
     ob=input();
     cout<<"Back to main()"<<endl;
     ob.show();
+    cout<<"Hey new thingy check kora lagbe...so amra justcheck() ke call kortesi"<<endl;
+    Samp cute=justCheck(ob);
     cout<<"Okay bye bye returning from main....so main's object is destroying"<<endl;
 }
