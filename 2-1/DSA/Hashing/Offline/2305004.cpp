@@ -165,6 +165,27 @@ public:
         return (double)total/tablesize;
     }
 
+    int hashInt(int key) {
+        unsigned int x = (unsigned int)key;
+        x = ((x >> 16) ^ x) * 0x45d9f3b;
+        x = ((x >> 16) ^ x) * 0x45d9f3b;
+        x = (x >> 16) ^ x;
+        return x % tablesize;
+    }
+
+    int hashChar(char key) {
+        // We cast to unsigned char to avoid negative values from extended ASCII
+        unsigned int hashvalue = (unsigned char)key;
+        // Apply a simple transformation to spread it out
+        hashvalue = (hashvalue * 31) % tablesize;
+        return (int)hashvalue;
+    }
+
+    int auxHashInt(int key) {
+        int R = previousPrime(tablesize - 1);
+        return R - (key % R);
+    }
+
     virtual void insert(const K& key,const V& value)=0;
     virtual bool search(const K& key,V& value,int& hits)=0;
     virtual bool remove(const K& key)=0;
