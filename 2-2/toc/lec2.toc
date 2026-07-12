@@ -1,0 +1,8 @@
+\beamer@sectionintoc {1}{Lecture 5A: The Philosophy of Nondeterminism}{3}{0}{1}
+\beamer@sectionintoc {2}{Lecture 5B: From DFA to NFA}{21}{0}{2}
+\beamer@sectionintoc {3}{Lecture 5C: Formal Definition of NFA}{39}{0}{3}
+\beamer@sectionintoc {4}{Lecture 5D: More Examples}{48}{0}{4}
+\beamer@sectionintoc {5}{Lecture 5E: Special Languages and Empty Objects}{65}{0}{5}
+\beamer@sectionintoc {6}{Lecture 5F: Epsilon Transitions}{79}{0}{6}
+\beamer@sectionintoc {7}{Lecture 5G: Nondeterminism in the Larger Story}{87}{0}{7}
+\beamer@sectionintoc {8}{Practice Problems}{93}{0}{8}

@@ -1,0 +1,34 @@
+\begin{thebibliography}{3}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Axfors et~al.(2021)Axfors, Janiaud, Schmitt, van’t Hooft, Smith,
+  Haber, Abayomi, Abduljalil, Abdulrahman, Acosta-Ampudia,
+  et~al.]{axfors2021association}
+Cathrine Axfors, Perrine Janiaud, Andreas~M Schmitt, Janneke van’t Hooft,
+  Emily~R Smith, Noah~A Haber, Akin Abayomi, Manal Abduljalil, Abdulkarim
+  Abdulrahman, Yeny Acosta-Ampudia, et~al.
+\newblock Association between convalescent plasma treatment and mortality in
+  covid-19: a collaborative systematic review and meta-analysis of randomized
+  clinical trials.
+\newblock \emph{BMC infectious diseases}, 21\penalty0 (1):\penalty0 1170, 2021.
+
+\bibitem[Jarvis et~al.(2014)Jarvis, Mirarab, Aberer, Li, Houde, Li, Ho,
+  Faircloth, Nabholz, Howard, et~al.]{jarvis2014whole}
+Erich~D Jarvis, Siavash Mirarab, Andre~J Aberer, Bo~Li, Peter Houde, Cai Li,
+  Simon~YW Ho, Brant~C Faircloth, Benoit Nabholz, Jason~T Howard, et~al.
+\newblock Whole-genome analyses resolve early branches in the tree of life of
+  modern birds.
+\newblock \emph{Science}, 346\penalty0 (6215):\penalty0 1320--1331, 2014.
+
+\bibitem[Vaswani et~al.(2017)Vaswani, Shazeer, Parmar, Uszkoreit, Jones, Gomez,
+  Kaiser, and Polosukhin]{vaswani2017attention}
+Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones,
+  Aidan~N Gomez, {\L}ukasz Kaiser, and Illia Polosukhin.
+\newblock Attention is all you need.
+\newblock \emph{Advances in neural information processing systems}, 30, 2017.
+
+\end{thebibliography}

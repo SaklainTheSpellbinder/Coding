@@ -1,0 +1,22 @@
+\frametitle{Example: Valid Python Programs}
+Question:
+
+\begin{center}
+What language is recognized by Python's parser?
+\end{center}
+
+\pause
+\[
+\mathrm{PYTHON} = \{x : x \text{ is a syntactically valid Python program}\}.
+\]
+
+\pause
+\begin{lstlisting}
+def square(x):
+    return x*x
+\end{lstlisting}
+
+\pause
+\begin{center}
+Programming languages are literally languages.
+\end{center}
