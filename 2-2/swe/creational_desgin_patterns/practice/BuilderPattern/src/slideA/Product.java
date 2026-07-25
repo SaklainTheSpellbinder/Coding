@@ -1,3 +1,5 @@
+package slideA;
+
 import java.util.LinkedList;
 
 public class Product {
@@ -8,13 +10,12 @@ public class Product {
     }
 
     public void show(){
-        System.out.println("\nProduct completed as below:");
+        System.out.println("\nslideA.Product completed as below:");
         for (String part: parts){
             System.out.println(part);
         }
     }
-
-    
-
-
 }
+
+
+
